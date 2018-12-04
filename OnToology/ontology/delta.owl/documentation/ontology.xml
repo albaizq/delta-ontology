@@ -1,0 +1,622 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://delta.linkeddata.es/def/core#"
+     xml:base="http://delta.linkeddata.es/def/core"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:core="http://delta.linkeddata.es/def/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://delta.linkeddata.es/def/core">
+        <dc:title>DELTA ontology</dc:title>
+        <terms:creator rdf:resource="http://www.garcia-castro.com/foaf.rdf#me"/>
+        <terms:creator>Alba Fernández Izquierdo</terms:creator>
+        <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
+        <rdfs:comment>This ontology represents the  terms to allow interoperability in DELTA project</rdfs:comment>
+        <owl:versionInfo>0.0.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://delta.linkeddata.es/def/core#preferredNamespaceUri"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#belongsTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#belongsTo">
+        <rdfs:label>belongs to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#calculatesProperty -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#calculatesProperty">
+        <rdfs:label>calculates property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#estimateVoltageInestability -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#estimateVoltageInestability">
+        <rdfs:label>estimates voltage inestability</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#estimates -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#estimates">
+        <rdfs:label>estimates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#estimatesFrequencyInestability -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#estimatesFrequencyInestability">
+        <rdfs:label>estimates frequency inestability</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#hasCurrency -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasCurrency">
+        <rdfs:label>has currency</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#hasDuration -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasDuration">
+        <rdfs:label>has duration</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#hasEnergyMarket -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasEnergyMarket">
+        <rdfs:label>has energy market</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#hasIncentive -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasIncentive">
+        <rdfs:label>has incentive</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#hasPrice -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasPrice">
+        <rdfs:label>has price</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#measuresProperty -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#measuresProperty">
+        <rdfs:label>measures property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#capacitySold -->
+
+
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#capacitySold">
+        <rdfs:label>capacity sold</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#hasBeginning -->
+
+
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#hasBeginning">
+        <rdfs:label>has beginning</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#hasEnd -->
+
+
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#hasEnd">
+        <rdfs:label>has end</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#hasTimestamp -->
+
+
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#hasTimestamp">
+        <rdfs:label>has timestamp</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#highVoltage -->
+
+
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#highVoltage">
+        <rdfs:label>high voltage</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#lowVoltage -->
+
+
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#lowVoltage">
+        <rdfs:label>low voltage</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#overFrequency -->
+
+
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#overFrequency">
+        <rdfs:label>over frequency</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#underFrequency -->
+
+
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#underFrequency">
+        <rdfs:label>under frequency</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Agent -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Agent">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#estimates"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Bid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#estimates"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#GridInestabilityEstimation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasEnergyMarket"/>
+                <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#EnergyMarket"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#measuresProperty"/>
+                <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://delta.linkeddata.es/def/core#VirtualNode"/>
+        <rdfs:label>Agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Bid -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Bid">
+        <owl:disjointWith rdf:resource="http://delta.linkeddata.es/def/core#GridInestabilityEstimation"/>
+        <rdfs:label>Bid</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#BuyPrice -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#BuyPrice">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Price"/>
+        <rdfs:label>Buy price</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#CorrectedEnergy -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#CorrectedEnergy">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Property"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasIncentive"/>
+                <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Incentive"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Corrected energy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#EnergyMarket -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#EnergyMarket">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasPrice"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/saref#Price"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasTimestamp"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Energy market</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Flexibility -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Flexibility">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Property"/>
+        <rdfs:label>Flexibility</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#FlexibilityBid -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#FlexibilityBid">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Bid"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasDuration"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#TimeInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#capacitySold"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Flexibility bid</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#FrequencyInestability -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#FrequencyInestability">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#overFrequency"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#underFrequency"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Frequency inestability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Generation -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Generation">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Property"/>
+        <rdfs:label>Generation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#GridInestabilityEstimation -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#GridInestabilityEstimation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#estimateVoltageInestability"/>
+                <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#VoltageInestability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#estimatesFrequencyInestability"/>
+                <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#FrequencyInestability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Grid inestability estimation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Incentive -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Incentive"/>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Load -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Load">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Property"/>
+        <rdfs:label>Load</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#MinimumCapacityBid -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#MinimumCapacityBid">
+        <rdfs:label>Minimum  capacity bid</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#PowerConsumtpion -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#PowerConsumtpion">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Property"/>
+        <rdfs:label>Power consumption</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#PriceBid -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#PriceBid">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Bid"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Price"/>
+        <rdfs:label>Price bid</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#PriceBidAS -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#PriceBidAS">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#PriceBid"/>
+        <rdfs:label>Price bid AS</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#PriceBidDayAhead -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#PriceBidDayAhead">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#PriceBid"/>
+        <rdfs:label>Price bid day ahead</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#PriceBidIntraDay -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#PriceBidIntraDay">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#PriceBid"/>
+        <rdfs:label>Price bid intra-day</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Property -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Property">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Property"/>
+        <rdfs:label>Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Storage -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Storage">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Property"/>
+        <rdfs:label>Storage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#TimeInterval -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#TimeInterval">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasBeginning"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasEnd"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Time interval</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#VirtualNode -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#VirtualNode">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#calculatesProperty"/>
+                <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#measuresProperty"/>
+                <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Virtual node</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#VoltageInestability -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#VoltageInestability">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#highVoltage"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#lowVoltage"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Voltage inestability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/saref#Price -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#Price"/>
+    
+
+
+    <!-- https://w3id.org/saref#Property -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#Property"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/ -->
+
+

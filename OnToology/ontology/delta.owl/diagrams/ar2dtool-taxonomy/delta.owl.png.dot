@@ -1,0 +1,20 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:PriceBid" "base:BuyPrice" "saref:Property" "base:Load" "base:PriceBidDayAhead" "base:Generation" "base:PriceBidIntraDay" "base:FlexibilityBid" "base:Storage" "base:Flexibility" "base:CorrectedEnergy" "saref:Price" "base:Property" "base:PriceBidAS" "base:PowerConsumtpion" "base:Bid" ; /*classes style*/
+	"base:Generation" -> "base:Property" [ label = "rdfs:subClassOf" ];
+	"base:Flexibility" -> "base:Property" [ label = "rdfs:subClassOf" ];
+	"base:FlexibilityBid" -> "base:Bid" [ label = "rdfs:subClassOf" ];
+	"base:CorrectedEnergy" -> "base:Property" [ label = "rdfs:subClassOf" ];
+	"base:BuyPrice" -> "saref:Price" [ label = "rdfs:subClassOf" ];
+	"base:PriceBidAS" -> "base:PriceBid" [ label = "rdfs:subClassOf" ];
+	"base:PriceBidIntraDay" -> "base:PriceBid" [ label = "rdfs:subClassOf" ];
+	"base:Storage" -> "base:Property" [ label = "rdfs:subClassOf" ];
+	"base:Property" -> "saref:Property" [ label = "rdfs:subClassOf" ];
+	"base:PriceBid" -> "saref:Price" [ label = "rdfs:subClassOf" ];
+	"base:PriceBid" -> "base:Bid" [ label = "rdfs:subClassOf" ];
+	"base:PowerConsumtpion" -> "base:Property" [ label = "rdfs:subClassOf" ];
+	"base:PriceBidDayAhead" -> "base:PriceBid" [ label = "rdfs:subClassOf" ];
+	"base:Load" -> "base:Property" [ label = "rdfs:subClassOf" ];
+
+}
