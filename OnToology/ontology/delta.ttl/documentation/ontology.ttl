@@ -12,7 +12,7 @@
                                                                           "Alba Fernández Izquierdo" ;
                                        <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                        rdfs:comment "This ontology represents the  terms to allow interoperability in DELTA project" ;
-                                       owl:versionInfo "0.0.1" .
+                                       owl:versionInfo "0.0.2" .
 
 #################################################################
 #    Annotation properties

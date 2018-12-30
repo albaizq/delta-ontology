@@ -214,7 +214,7 @@
     "@value" : "This ontology represents the  terms to allow interoperability in DELTA project"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.0.1"
+    "@value" : "0.0.2"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#Bid",
