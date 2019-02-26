@@ -4,6 +4,9 @@
       "@id" : "http://delta.linkeddata.es/def/core#belongsTo",
       "@type" : "@id"
     },
+    "UnitOfMeasure" : {
+      "@id" : "https://w3id.org/saref#UnitOfMeasure"
+    },
     "hasPrice" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasPrice",
       "@type" : "@id"
@@ -34,11 +37,18 @@
       "@id" : "https://w3id.org/saref#measuresProperty",
       "@type" : "@id"
     },
+    "FEID" : {
+      "@id" : "http://delta.linkeddata.es/def/core#FEID"
+    },
     "Customer" : {
       "@id" : "http://delta.linkeddata.es/def/core#Customer"
     },
     "isAllocatedIn" : {
       "@id" : "http://delta.linkeddata.es/def/core#isAllocatedIn",
+      "@type" : "@id"
+    },
+    "send" : {
+      "@id" : "http://delta.linkeddata.es/def/core#send",
       "@type" : "@id"
     },
     "Profit" : {
@@ -64,6 +74,12 @@
     },
     "Measurement" : {
       "@id" : "https://w3id.org/saref#Measurement"
+    },
+    "Signal" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Signal"
+    },
+    "Reliability" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Reliability"
     },
     "hasReward" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasReward",
@@ -97,6 +113,9 @@
     },
     "PriceBidAS" : {
       "@id" : "http://delta.linkeddata.es/def/core#PriceBidAS"
+    },
+    "granularity" : {
+      "@id" : "http://delta.linkeddata.es/def/core#granularity"
     },
     "TimeInterval" : {
       "@id" : "http://delta.linkeddata.es/def/core#TimeInterval"
@@ -157,6 +176,10 @@
     "PriceBidDayAhead" : {
       "@id" : "http://delta.linkeddata.es/def/core#PriceBidDayAhead"
     },
+    "isMeasuredIn" : {
+      "@id" : "https://w3id.org/saref#isMeasuredIn",
+      "@type" : "@id"
+    },
     "capacitySold" : {
       "@id" : "http://delta.linkeddata.es/def/core#capacitySold"
     },
@@ -183,6 +206,10 @@
     },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "isOwnedBy" : {
+      "@id" : "http://delta.linkeddata.es/def/core#isOwnedBy",
+      "@type" : "@id"
     },
     "owns" : {
       "@id" : "http://delta.linkeddata.es/def/core#owns",

@@ -1,12 +1,13 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "core:Customer" "saref:Property" "core:Consumer" "core:Load" "core:PriceBidDayAhead" "core:Generation" "saref:Device" "core:PriceBidIntraDay" "core:Power" "core:Prosumer" "core:FlexibilityBid" "core:Device" "core:Flexibility" "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" "saref:Price" "core:Property" "core:PriceBidAS" "core:Energy" "core:Bid" "core:PriceBid" ; /*classes style*/
+node [shape = rectangle, color="black"]; "core:Customer" "saref:Property" "core:Consumer" "core:Load" "core:PriceBidDayAhead" "core:Generation" "saref:Device" "core:PriceBidIntraDay" "core:Power" "core:Prosumer" "core:FlexibilityBid" "core:Device" "core:Flexibility" "core:Reliability" "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" "saref:Price" "core:Property" "core:PriceBidAS" "core:Energy" "core:Bid" "core:PriceBid" ; /*classes style*/
 	"core:Generation" -> "core:Property" [ label = "rdfs:subClassOf" ];
 	"core:Flexibility" -> "core:Property" [ label = "rdfs:subClassOf" ];
 	"core:FlexibilityBid" -> "core:Bid" [ label = "rdfs:subClassOf" ];
-	"core:PriceBidAS" -> "core:PriceBid" [ label = "rdfs:subClassOf" ];
+	"core:Reliability" -> "core:Property" [ label = "rdfs:subClassOf" ];
 	"core:Energy" -> "core:Property" [ label = "rdfs:subClassOf" ];
+	"core:PriceBidAS" -> "core:PriceBid" [ label = "rdfs:subClassOf" ];
 	"core:PriceBidIntraDay" -> "core:PriceBid" [ label = "rdfs:subClassOf" ];
 	"core:Power" -> "core:Property" [ label = "rdfs:subClassOf" ];
 	"core:Prosumer" -> "core:Customer" [ label = "rdfs:subClassOf" ];

@@ -11,13 +11,31 @@
   "@id" : "_:genid10",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#belongsTo"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#FEID"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#isOwnedBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Customer"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#stateOfCharge"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#rational"
   } ]
 }, {
-  "@id" : "_:genid11",
+  "@id" : "_:genid13",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#Incentive"
@@ -26,16 +44,16 @@
     "@id" : "http://delta.linkeddata.es/def/core#hasIncentive"
   } ]
 }, {
-  "@id" : "_:genid12",
+  "@id" : "_:genid14",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://delta.linkeddata.es/def/core#activates"
+    "@id" : "http://delta.linkeddata.es/def/core#hasAggregatedProperty"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://delta.linkeddata.es/def/core#Aggregator"
+    "@id" : "https://w3id.org/saref#Property"
   } ]
 }, {
-  "@id" : "_:genid13",
+  "@id" : "_:genid15",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#capacitySold"
@@ -44,7 +62,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "_:genid14",
+  "@id" : "_:genid16",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#hasDuration"
@@ -53,49 +71,31 @@
     "@id" : "http://delta.linkeddata.es/def/core#TimeInterval"
   } ]
 }, {
-  "@id" : "_:genid15",
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#granularity"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#rational"
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#type"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#rational"
+  } ]
+}, {
+  "@id" : "_:genid19",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#hasBeginning"
-  } ]
-}, {
-  "@id" : "_:genid16",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://delta.linkeddata.es/def/core#hasEnd"
-  } ]
-}, {
-  "@id" : "_:genid17",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://delta.linkeddata.es/def/core#isAllocatedIn"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://delta.linkeddata.es/def/core#Aggregator"
-  } ]
-}, {
-  "@id" : "_:genid18",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://delta.linkeddata.es/def/core#uses"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://delta.linkeddata.es/def/core#Bid"
-  } ]
-}, {
-  "@id" : "_:genid19",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://delta.linkeddata.es/def/core#Cluster"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://delta.linkeddata.es/def/core#hasCluster"
   } ]
 }, {
   "@id" : "_:genid2",
@@ -110,13 +110,49 @@
   "@id" : "_:genid20",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasEnd"
+  } ]
+}, {
+  "@id" : "_:genid21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#isAllocatedIn"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Aggregator"
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#uses"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Bid"
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Cluster"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasCluster"
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#Profile"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#hasProfile"
   } ]
 }, {
-  "@id" : "_:genid21",
+  "@id" : "_:genid25",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/saref#Device"
@@ -125,7 +161,7 @@
     "@id" : "http://delta.linkeddata.es/def/core#manage"
   } ]
 }, {
-  "@id" : "_:genid22",
+  "@id" : "_:genid26",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/saref#Property"
@@ -134,7 +170,16 @@
     "@id" : "https://w3id.org/saref#measuresProperty"
   } ]
 }, {
-  "@id" : "_:genid23",
+  "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/saref#UnitOfMeasure"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/saref#isMeasuredIn"
+  } ]
+}, {
+  "@id" : "_:genid28",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/saref#Measurement"
@@ -254,6 +299,9 @@
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#Cluster",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cluster"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "_:genid4"
   } ]
@@ -272,6 +320,9 @@
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#Customer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Entity that interacts in the platform"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Customer"
   }, {
@@ -303,6 +354,10 @@
     "@id" : "_:genid9"
   }, {
     "@id" : "_:genid10"
+  }, {
+    "@id" : "_:genid11"
+  }, {
+    "@id" : "_:genid12"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#Energy",
@@ -316,16 +371,22 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#Property"
   }, {
-    "@id" : "_:genid11"
+    "@id" : "_:genid13"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#EnergyMarket",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#FEID",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Set of devices"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Energy market"
+    "@value" : "FEID"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid12"
+    "@id" : "_:genid14"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#Flexibility",
@@ -351,7 +412,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#Bid"
   }, {
-    "@id" : "_:genid13"
+    "@id" : "_:genid15"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#Generation",
@@ -458,7 +519,11 @@
     "@value" : "Profile"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid14"
+    "@id" : "_:genid16"
+  }, {
+    "@id" : "_:genid17"
+  }, {
+    "@id" : "_:genid18"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#Profit",
@@ -488,6 +553,12 @@
     "@id" : "http://delta.linkeddata.es/def/core#Customer"
   } ]
 }, {
+  "@id" : "http://delta.linkeddata.es/def/core#Reliability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Property"
+  } ]
+}, {
   "@id" : "http://delta.linkeddata.es/def/core#Reward",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -495,6 +566,15 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Reward"
+  } ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#Signal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Signal sent to the virtual nodes or feids in order to request or offer energy, or ask for actions"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Signal"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#TimeInterval",
@@ -506,9 +586,9 @@
     "@value" : "Time interval"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid15"
+    "@id" : "_:genid19"
   }, {
-    "@id" : "_:genid16"
+    "@id" : "_:genid20"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#VirtualNode",
@@ -520,15 +600,15 @@
     "@value" : "Virtual node"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid17"
-  }, {
-    "@id" : "_:genid18"
-  }, {
-    "@id" : "_:genid19"
-  }, {
-    "@id" : "_:genid20"
-  }, {
     "@id" : "_:genid21"
+  }, {
+    "@id" : "_:genid22"
+  }, {
+    "@id" : "_:genid23"
+  }, {
+    "@id" : "_:genid24"
+  }, {
+    "@id" : "_:genid25"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#activates",
@@ -546,16 +626,46 @@
     "@id" : "http://delta.linkeddata.es/def/core#owns"
   } ]
 }, {
+  "@id" : "http://delta.linkeddata.es/def/core#bid_energy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://delta.linkeddata.es/def/core#Signal" ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#bid_load",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://delta.linkeddata.es/def/core#Signal" ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#bid_price",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://delta.linkeddata.es/def/core#Signal" ]
+}, {
   "@id" : "http://delta.linkeddata.es/def/core#capacitySold",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "capacity sold"
   } ]
 }, {
+  "@id" : "http://delta.linkeddata.es/def/core#charge_state",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://delta.linkeddata.es/def/core#Signal" ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#demand_charge",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://delta.linkeddata.es/def/core#Signal" ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#electricity_price",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://delta.linkeddata.es/def/core#Signal" ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#energy_price",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://delta.linkeddata.es/def/core#Signal" ]
+}, {
   "@id" : "http://delta.linkeddata.es/def/core#estimates",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "estimates"
+  } ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#granularity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "granularity of the profile"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "granularity"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#hasAggregatedProperty",
@@ -630,6 +740,18 @@
     "@value" : "is allocated in"
   } ]
 }, {
+  "@id" : "http://delta.linkeddata.es/def/core#isOwnedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is owned by"
+  } ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#load_control",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://delta.linkeddata.es/def/core#Signal" ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#load_dispatch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://delta.linkeddata.es/def/core#Signal" ]
+}, {
   "@id" : "http://delta.linkeddata.es/def/core#manage",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -644,6 +766,12 @@
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#preferredNamespaceUri",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#send",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "send"
+  } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#sendBids",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
@@ -699,11 +827,14 @@
     "@value" : "Device"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid22"
+    "@id" : "_:genid26"
   } ]
 }, {
   "@id" : "https://w3id.org/saref#Measurement",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid27"
+  } ]
 }, {
   "@id" : "https://w3id.org/saref#Price",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
@@ -711,8 +842,14 @@
   "@id" : "https://w3id.org/saref#Property",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid23"
+    "@id" : "_:genid28"
   } ]
+}, {
+  "@id" : "https://w3id.org/saref#UnitOfMeasure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/saref#isMeasuredIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "https://w3id.org/saref#isRelatedToMeasurement",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
