@@ -1,0 +1,560 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="urn:default:baseUri:#"
+     xml:base="urn:default:baseUri:"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:vtc="http://w3id.org/def/vtc#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="urn:default:baseUri:"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/def/vtc#isRelatedToRequirement -->
+
+
+    <owl:AnnotationProperty rdf:about="http://w3id.org/def/vtc#isRelatedToRequirement"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/def/vtc#desiredBehaviour -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/def/vtc#desiredBehaviour"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/def/vtc#TestCaseDesign -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/vtc#TestCaseDesign"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- urn:default:baseUri:testDesign1 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign1">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>VirtualNode subclassOf manage some Consumer</vtc:desiredBehaviour>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign10 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign10">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Device subclassOf measuresProperty some Energy</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-39"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign11 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign11">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Device subclassOf measuresProperty some Energy</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-37"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign12 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign12">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Device subclassOf measuresProperty some Generation</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-36"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign13 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign13">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Device subclassOf measuresProperty only Property</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-35"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign14 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign14">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>VirtualNode subclassOf manage some Device</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-34"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign15 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign15">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>VirtualNode subclassOf uses some FlexibilityBid</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-33"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign16 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign16">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Frequency subclassOf Property</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-28"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign17 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign17">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Voltage subclassOf Property</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-28"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign18 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign18">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Load subclassOf Property</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-28"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign19 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign19">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Bid subclassOf hasDuration only TimeInterval</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-27"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign2 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign2">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>VirtualNode subclassOf cluster some string</vtc:desiredBehaviour>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign20 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign20">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>PriceBidAS subclassOf Price</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-26"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign21 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign21">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>PriceBidIntraDay subclassOf Price</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-26"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign22 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign22">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>PriceBidDayAhead subclassOf Price</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-26"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign23 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign23">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Device subclassOf measuresProperty some Flexibility</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-25"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign24 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign24">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Prosumer subclassOf hasReward some Reward</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Prosumer type Class</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-2"/>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-46"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign25 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign25">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>VirtualNode subclassOf cluster some string</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-47"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign26 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign26">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>VirtualNode subclassOf manage some Consumer</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-48"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign27 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign27">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>VirtualNode subclassOf uses some FlexibilityBid</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-49"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign28 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign28">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Profile type Class</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-50"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign29 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign29">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>VirtualNode subclassOf hasProfile only Profile</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-51"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign3 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign3">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Prosumer subclassOf hasReward some Reward</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-46"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign30 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign30">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Device subclassOf hasProfile only Profile</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-52"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign31 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign31">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Device subclassOf isOwnedBy some Customer</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-53"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign32 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign32">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Customer subclassOf hasRewards only Rewards</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-54"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign33 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign33">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Consumer subclassOf Device</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Prosumer subclassOf Device</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-55"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign34 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign34">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Frequency subclassOf Property</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-56"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign35 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign35">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Voltage subclassOf Property</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-56"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign36 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign36">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Profile subclassOf isRelatedToProperty only Property</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-57"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign37 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign37">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Profile subclassOf type only string</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-58"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign38 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign38">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Profile subclassOf granularity only string</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-59"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign39 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign39">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>VirtualNode subclassOf send some Signal</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-60"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign4 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign4">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Prosumer subclassOf type only string</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-45"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign40 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign40">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>VirtualNode subclassOf send some Signal</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-61"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign41 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign41">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>FEID subclassOf measuresProperty only Property</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-63"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign42 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign42">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>load_dispatch type Signal</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-64"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign43 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign43">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>demand_charge type Signal</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-65"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign5 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign5">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Prosumer subclassOf measuresProperty some Generation</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-44"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign6 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign6">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Prosumer subclassOf measuresProperty some Energy</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-43"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign7 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign7">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Prosumer subclassOf Device</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-42"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign8 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign8">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Prosumer subclassOf SpatialThing</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-41"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:testDesign9 -->
+
+
+    <owl:NamedIndividual rdf:about="urn:default:baseUri:testDesign9">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Energy subclassOf hasIncentive only Incentive</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-40"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/ -->
+
+
