@@ -433,8 +433,8 @@
 
 ###  http://delta.linkeddata.es/def/core#Reliability
 :Reliability rdf:type owl:Class ;
-             rdfs:subClassOf :Property;
-             rdfs:label "Reliability"  .
+             rdfs:subClassOf :Property ;
+             rdfs:label "Reliability" .
 
 
 ###  http://delta.linkeddata.es/def/core#Reward
@@ -512,7 +512,7 @@
                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                        owl:onProperty <https://w3id.org/saref#isMeasuredIn> ;
                                                        owl:allValuesFrom <https://w3id.org/saref#UnitOfMeasure>
-                                                     ];
+                                                     ] ;
                                      rdfs:label "Measurement" .
 
 

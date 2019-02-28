@@ -597,6 +597,9 @@
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#Reliability",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Reliability"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#Property"
   } ]
@@ -882,6 +885,9 @@
 }, {
   "@id" : "https://w3id.org/saref#Measurement",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Measurement"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "_:genid31"
   } ]
