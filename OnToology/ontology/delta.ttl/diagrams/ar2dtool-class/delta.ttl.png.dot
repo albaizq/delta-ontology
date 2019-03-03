@@ -2,8 +2,8 @@ digraph ar2dtool_diagram {
 rankdir=LR;
 size="1501"
 node [shape = rectangle, color="orange"]; "core:Customer" "core:Signal" "core:Aggregator" "saref:Property" "core:TimeInterval" "saref:Device" "core:Reward" "core:Profile" "core:EnergyMarket" "core:Device" "core:Property" "saref:UnitOfMeasure" "saref:Measurement" "core:Incentive" "core:Bid" "core:FEID" "core:Cluster" ; /*classes style*/
-	"http://delta.linkeddata.es/def/core" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = ":license" ];
-	"http://delta.linkeddata.es/def/core" -> "http://www.garcia-castro.com/foaf.rdf#me" [ label = ":creator" ];
+	"http://delta.linkeddata.es/def/core" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = "terms:license" ];
+	"http://delta.linkeddata.es/def/core" -> "http://www.garcia-castro.com/foaf.rdf#me" [ label = "terms:creator" ];
 	"core:stateOfCharge" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
 	"NULL" -> "core:estimates" [ label = "owl:onProperty" ];
 	"NULL" -> "core:type" [ label = "owl:onProperty" ];
@@ -21,6 +21,7 @@ node [shape = rectangle, color="orange"]; "core:Customer" "core:Signal" "core:Ag
 	"NULL" -> "saref:measuresProperty" [ label = "owl:onProperty" ];
 	"NULL" -> "saref:Device" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:hasCluster" [ label = "owl:onProperty" ];
+	"NULL" -> "saref:hasValue" [ label = "owl:onProperty" ];
 	"NULL" -> "owl:rational" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:isAllocatedIn" [ label = "owl:onProperty" ];
 	"NULL" -> "core:owns" [ label = "owl:onProperty" ];
@@ -42,6 +43,7 @@ node [shape = rectangle, color="orange"]; "core:Customer" "core:Signal" "core:Ag
 	"NULL" -> "core:isOwnedBy" [ label = "owl:onProperty" ];
 	"NULL" -> "core:isRelatedToProperty" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasBeginning" [ label = "owl:onProperty" ];
+	"NULL" -> "xsd:float" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:Cluster" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:sendBids" [ label = "owl:onProperty" ];
 	"NULL" -> "saref:Property" [ label = "owl:allValuesFrom" ];

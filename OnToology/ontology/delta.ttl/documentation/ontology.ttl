@@ -193,6 +193,10 @@
       rdfs:label "type" .
 
 
+###  https://w3id.org/saref#hasValue
+<https://w3id.org/saref#hasValue> rdf:type owl:DatatypeProperty .
+
+
 #################################################################
 #    Classes
 #################################################################
@@ -433,12 +437,12 @@
 
 ###  http://delta.linkeddata.es/def/core#Reliability
 :Reliability rdf:type owl:Class ;
-             rdfs:subClassOf :Property;
-             rdfs:label "Reliability"  .
+             rdfs:subClassOf :Property .
 
 
 ###  http://delta.linkeddata.es/def/core#Reward
 :Reward rdf:type owl:Class ;
+        rdfs:subClassOf :Property ;
         rdfs:comment "Reward associated to the customers that is given after using the engagement tools" ;
         rdfs:label "Reward" .
 
@@ -512,8 +516,11 @@
                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                        owl:onProperty <https://w3id.org/saref#isMeasuredIn> ;
                                                        owl:allValuesFrom <https://w3id.org/saref#UnitOfMeasure>
-                                                     ];
-                                     rdfs:label "Measurement" .
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <https://w3id.org/saref#hasValue> ;
+                                                       owl:allValuesFrom xsd:float
+                                                     ] .
 
 
 ###  https://w3id.org/saref#Price

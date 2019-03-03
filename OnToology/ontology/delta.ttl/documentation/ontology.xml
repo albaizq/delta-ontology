@@ -351,6 +351,13 @@
     
 
 
+    <!-- https://w3id.org/saref#hasValue -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/saref#hasValue"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -743,6 +750,7 @@
 
 
     <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Reward">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Property"/>
         <rdfs:comment>Reward associated to the customers that is given after using the engagement tools</rdfs:comment>
         <rdfs:label>Reward</rdfs:label>
     </owl:Class>
@@ -858,6 +866,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#isMeasuredIn"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>

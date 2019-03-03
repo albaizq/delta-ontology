@@ -37,6 +37,9 @@
       "@id" : "https://w3id.org/saref#measuresProperty",
       "@type" : "@id"
     },
+    "hasValue" : {
+      "@id" : "https://w3id.org/saref#hasValue"
+    },
     "FEID" : {
       "@id" : "http://delta.linkeddata.es/def/core#FEID"
     },
