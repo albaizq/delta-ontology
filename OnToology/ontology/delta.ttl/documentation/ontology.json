@@ -412,7 +412,7 @@
     "@value" : "This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible."
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.1.3"
+    "@value" : "0.1.4"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#Aggregator",

@@ -50,12 +50,12 @@ node [shape = rectangle, color="orange"]; "core:SystemConstraint" "core:Customer
 	"NULL" -> "saref:hasFeatureOfInterest" [ label = "owl:onProperty" ];
 	"NULL" -> "core:FEID" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:hasIncentive" [ label = "owl:onProperty" ];
-	"NULL" -> "core:Customer" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:Transaction" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "core:Customer" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:hasMeasurement" [ label = "owl:onProperty" ];
 	"NULL" -> "xsd:dateTime" [ label = "owl:allValuesFrom" ];
-	"NULL" -> "core:isOwnedBy" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasDescription" [ label = "owl:onProperty" ];
+	"NULL" -> "core:isOwnedBy" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasTransaction" [ label = "owl:onProperty" ];
 	"NULL" -> "core:SystemConstraint" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:isRelatedToProperty" [ label = "owl:onProperty" ];
@@ -66,8 +66,8 @@ node [shape = rectangle, color="orange"]; "core:SystemConstraint" "core:Customer
 	"NULL" -> "core:hasComfortSetting" [ label = "owl:onProperty" ];
 	"NULL" -> "core:sendBids" [ label = "owl:onProperty" ];
 	"NULL" -> "saref:timeStamp" [ label = "owl:onProperty" ];
-	"NULL" -> "core:isValidDuringPeriod" [ label = "owl:onProperty" ];
 	"NULL" -> "saref:Property" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "core:isValidDuringPeriod" [ label = "owl:onProperty" ];
 	"NULL" -> "core:agreesOn" [ label = "owl:onProperty" ];
 	"NULL" -> "core:send" [ label = "owl:onProperty" ];
 	"NULL" -> "rdfs:Literal" [ label = "owl:allValuesFrom" ];

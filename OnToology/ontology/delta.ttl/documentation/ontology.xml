@@ -15,7 +15,7 @@
         <terms:creator>Alba Fernández Izquierdo</terms:creator>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
         <rdfs:comment>This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible.</rdfs:comment>
-        <owl:versionInfo>0.1.3</owl:versionInfo>
+        <owl:versionInfo>0.1.4</owl:versionInfo>
     </owl:Ontology>
     
 
