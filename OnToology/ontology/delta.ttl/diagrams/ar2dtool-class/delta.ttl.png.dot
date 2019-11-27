@@ -27,9 +27,9 @@ node [shape = rectangle, color="orange"]; "core:Phase" "core:SystemConstraint" "
 	"NULL" -> "core:Phase" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "saref:measuresProperty" [ label = "owl:onProperty" ];
 	"NULL" -> "core:isLocatedAt" [ label = "owl:onProperty" ];
-	"NULL" -> "owl:rational" [ label = "owl:someValuesFrom" ];
-	"NULL" -> "saref:consistsOf" [ label = "owl:onProperty" ];
 	"NULL" -> "saref:hasValue" [ label = "owl:onProperty" ];
+	"NULL" -> "saref:consistsOf" [ label = "owl:onProperty" ];
+	"NULL" -> "owl:rational" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:isAllocatedIn" [ label = "owl:onProperty" ];
 	"NULL" -> "https://w3id.org/def/saref4city#isDerivedFrom" [ label = "owl:onProperty" ];
 	"NULL" -> "core:sectorName" [ label = "owl:onProperty" ];
@@ -49,8 +49,8 @@ node [shape = rectangle, color="orange"]; "core:Phase" "core:SystemConstraint" "
 	"NULL" -> "core:href" [ label = "owl:onProperty" ];
 	"NULL" -> "saref:hasFeatureOfInterest" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasIncentive" [ label = "owl:onProperty" ];
-	"NULL" -> "core:Transaction" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:Customer" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "core:Transaction" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "xsd:dateTime" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:isOwnedBy" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasTransaction" [ label = "owl:onProperty" ];

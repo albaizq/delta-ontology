@@ -6,7 +6,7 @@
 <http://delta.linkeddata.es/def/core> <http://purl.org/dc/terms/creator> "Andrea Cimmino" .
 <http://delta.linkeddata.es/def/core> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
 <http://delta.linkeddata.es/def/core> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible." .
-<http://delta.linkeddata.es/def/core> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.5" .
+<http://delta.linkeddata.es/def/core> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.6" .
 # 
 # 
 # #################################################################
@@ -672,6 +672,11 @@ _:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#
 <http://delta.linkeddata.es/def/core#EnergyGeneration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://delta.linkeddata.es/def/core#Energy> .
 <http://delta.linkeddata.es/def/core#EnergyGeneration> <http://www.w3.org/2000/01/rdf-schema#label> "Energy generation" .
 # 
+# http://delta.linkeddata.es/def/core#EnergyGenerationForecast
+<http://delta.linkeddata.es/def/core#EnergyGenerationForecast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://delta.linkeddata.es/def/core#EnergyGenerationForecast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://delta.linkeddata.es/def/core#Energy> .
+<http://delta.linkeddata.es/def/core#EnergyGenerationForecast> <http://www.w3.org/2000/01/rdf-schema#label> "Energy generation forecast" .
+# 
 # http://delta.linkeddata.es/def/core#LoadForecast
 <http://delta.linkeddata.es/def/core#LoadForecast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://delta.linkeddata.es/def/core#LoadForecast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://delta.linkeddata.es/def/core#Load> .
@@ -686,6 +691,11 @@ _:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#
 <http://delta.linkeddata.es/def/core#PowerGeneration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://delta.linkeddata.es/def/core#PowerGeneration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://delta.linkeddata.es/def/core#Power> .
 <http://delta.linkeddata.es/def/core#PowerGeneration> <http://www.w3.org/2000/01/rdf-schema#label> "Power generation" .
+# 
+# http://delta.linkeddata.es/def/core#PowerGenerationForecast
+<http://delta.linkeddata.es/def/core#PowerGenerationForecast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://delta.linkeddata.es/def/core#PowerGenerationForecast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://delta.linkeddata.es/def/core#Power> .
+<http://delta.linkeddata.es/def/core#PowerGenerationForecast> <http://www.w3.org/2000/01/rdf-schema#label> "Power generation forecast" .
 # 
 # http://delta.linkeddata.es/def/core#PriceAS
 <http://delta.linkeddata.es/def/core#PriceAS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .

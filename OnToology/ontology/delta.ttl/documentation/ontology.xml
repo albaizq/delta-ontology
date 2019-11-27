@@ -19,7 +19,7 @@
         <terms:creator>Andrea Cimmino</terms:creator>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
         <rdfs:comment>This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible.</rdfs:comment>
-        <owl:versionInfo>0.1.5</owl:versionInfo>
+        <owl:versionInfo>0.1.6</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1240,6 +1240,16 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#EnergyGenerationForecast -->
+
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#EnergyGenerationForecast">
+        <rdf:type rdf:resource="http://delta.linkeddata.es/def/core#Energy"/>
+        <rdfs:label>Energy generation forecast</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#LoadForecast -->
 
 
@@ -1266,6 +1276,16 @@
     <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#PowerGeneration">
         <rdf:type rdf:resource="http://delta.linkeddata.es/def/core#Power"/>
         <rdfs:label>Power generation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#PowerGenerationForecast -->
+
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#PowerGenerationForecast">
+        <rdf:type rdf:resource="http://delta.linkeddata.es/def/core#Power"/>
+        <rdfs:label>Power generation forecast</rdfs:label>
     </owl:NamedIndividual>
     
 

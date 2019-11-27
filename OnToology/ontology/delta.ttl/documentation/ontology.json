@@ -354,7 +354,7 @@
     "@id" : "https://w3id.org/def/openadr"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.1.5"
+    "@value" : "0.1.6"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#Aggregator",
@@ -466,6 +466,12 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://delta.linkeddata.es/def/core#Energy" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Energy generation"
+  } ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#EnergyGenerationForecast",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://delta.linkeddata.es/def/core#Energy" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Energy generation forecast"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#EnergyMarket",
@@ -601,6 +607,12 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://delta.linkeddata.es/def/core#Power" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Power generation"
+  } ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#PowerGenerationForecast",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://delta.linkeddata.es/def/core#Power" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Power generation forecast"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#PriceAS",
