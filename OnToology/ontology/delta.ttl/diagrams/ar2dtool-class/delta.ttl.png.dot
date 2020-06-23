@@ -1,12 +1,7 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "core:Phase" "core:CustomerCluster" "core:Index" "core:SystemConstraint" "core:Customer" "core:Incentive" "core:Transaction" "core:Sector" "http://www.opengis.net/ont/geosparql#Geometry" "saref:UnitOfMeasure" "core:Aggregator" "core:ComfortSetting" "saref:Measurement" "core:MarketSettlement" "saref:FeatureOfInterest" "core:Reward" "time:TemporalEntity" "core:SmartContract" "https://w3id.org/def/saref4city#KeyPerformanceIndicator" "core:Asset" "http://www.opengis.net/ont/geosparql#Feature" "saref:Property" "core:Profile" "core:Payment" ; /*classes style*/
-	"http://delta.linkeddata.es/def/core" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = ":license" ];
-	"http://delta.linkeddata.es/def/core" -> "http://www.garcia-castro.com/foaf.rdf#me" [ label = ":creator" ];
-	"http://delta.linkeddata.es/def/core" -> "https://w3id.org/def/openadr" [ label = "owl:imports" ];
-	"saref:hasValue" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
-	"core:clusterDescription" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
+node [shape = rectangle, color="orange"]; "core:Phase" "time:Duration" "core:CustomerCluster" "core:Index" "core:SystemConstraint" "core:Customer" "core:Incentive" "core:Transaction" "core:Sector" "core:DRRequest" "http://www.opengis.net/ont/geosparql#Geometry" "saref:UnitOfMeasure" "core:Aggregator" "core:Measurement" "core:ComfortSetting" "saref:Measurement" "saref:FeatureOfInterest" "core:MarketSettlement" "core:Reward" "time:TemporalEntity" "core:SmartContract" "https://w3id.org/def/saref4city#KeyPerformanceIndicator" "core:Asset" "http://www.opengis.net/ont/geosparql#Feature" "saref:Property" "core:Profile" "core:Payment" ; /*classes style*/
 	"NULL" -> "core:hasPhase" [ label = "owl:onProperty" ];
 	"NULL" -> "core:ComfortSetting" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "https://w3id.org/def/openadr#hasDuration" [ label = "owl:onProperty" ];
@@ -15,6 +10,7 @@ node [shape = rectangle, color="orange"]; "core:Phase" "core:CustomerCluster" "c
 	"NULL" -> "core:type" [ label = "owl:onProperty" ];
 	"NULL" -> "time:TemporalEntity" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:granularity" [ label = "owl:onProperty" ];
+	"NULL" -> "core:hasReliability" [ label = "owl:onProperty" ];
 	"NULL" -> "saref:FeatureOfInterest" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "saref:UnitOfMeasure" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:quantifiesKPI" [ label = "owl:onProperty" ];
@@ -24,12 +20,17 @@ node [shape = rectangle, color="orange"]; "core:Phase" "core:CustomerCluster" "c
 	"NULL" -> "xsd:float" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "xsd:string" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "https://w3id.org/def/saref4city#KeyPerformanceIndicator" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "core:Measurement" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:status" [ label = "owl:onProperty" ];
+	"NULL" -> "xsd:dateTimeStamp" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:Phase" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "time:Duration" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "saref:measuresProperty" [ label = "owl:onProperty" ];
+	"NULL" -> "core:hasOccurrence" [ label = "owl:onProperty" ];
+	"NULL" -> "core:sendsRequest" [ label = "owl:onProperty" ];
 	"NULL" -> "core:isLocatedAt" [ label = "owl:onProperty" ];
-	"NULL" -> "saref:consistsOf" [ label = "owl:onProperty" ];
 	"NULL" -> "saref:hasValue" [ label = "owl:onProperty" ];
+	"NULL" -> "saref:consistsOf" [ label = "owl:onProperty" ];
 	"NULL" -> "owl:rational" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:isAllocatedIn" [ label = "owl:onProperty" ];
 	"NULL" -> "https://w3id.org/def/saref4city#isDerivedFrom" [ label = "owl:onProperty" ];
@@ -52,8 +53,9 @@ node [shape = rectangle, color="orange"]; "core:Phase" "core:CustomerCluster" "c
 	"NULL" -> "core:hasPoints" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasIncentive" [ label = "owl:onProperty" ];
 	"NULL" -> "core:CustomerCluster" [ label = "owl:someValuesFrom" ];
-	"NULL" -> "core:Transaction" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:Customer" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "core:Transaction" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "core:DRRequest" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:Index" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "xsd:dateTime" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:isOwnedBy" [ label = "owl:onProperty" ];
@@ -61,26 +63,41 @@ node [shape = rectangle, color="orange"]; "core:Phase" "core:CustomerCluster" "c
 	"NULL" -> "core:SystemConstraint" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:clusterDescription" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasPayment" [ label = "owl:onProperty" ];
+	"NULL" -> "core:hasConstraint" [ label = "owl:onProperty" ];
 	"NULL" -> "xsd:float" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:hasComfortSetting" [ label = "owl:onProperty" ];
 	"NULL" -> "saref:timeStamp" [ label = "owl:onProperty" ];
-	"NULL" -> "saref:Property" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:isValidDuringPeriod" [ label = "owl:onProperty" ];
+	"NULL" -> "saref:Property" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:agreesOn" [ label = "owl:onProperty" ];
 	"NULL" -> "core:SmartContract" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "rdfs:Literal" [ label = "owl:allValuesFrom" ];
-	"NULL" -> "core:Sector" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:hasIndex" [ label = "owl:onProperty" ];
+	"NULL" -> "core:Sector" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "core:hasRedundancy" [ label = "owl:onProperty" ];
 	"NULL" -> "https://w3id.org/def/openadr#belongsTo" [ label = "owl:onProperty" ];
 	"NULL" -> "saref:isRelatedToMeasurement" [ label = "owl:onProperty" ];
+	"NULL" -> "core:requests" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasProfile" [ label = "owl:onProperty" ];
+	"http://delta.linkeddata.es/def/core" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = ":license" ];
+	"http://delta.linkeddata.es/def/core" -> "http://www.garcia-castro.com/foaf.rdf#me" [ label = ":creator" ];
+	"http://delta.linkeddata.es/def/core" -> "https://w3id.org/def/openadr" [ label = "owl:imports" ];
+	"core:clusterDescription" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
+	"saref:hasValue" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
 	"http://www.opengis.net/ont/geosparql#Geometry" -> "http://www.opengis.net/ont/geosparql" [ label = "rdfs:comment" ];
+	"http://www.opengis.net/ont/geosparql#Feature" -> "http://www.opengis.net/ont/geosparql#Geometry" [ label = "http://www.opengis.net/ont/geosparql#hasGeometry" ];
+	"owl:Thing" -> "xsd:float" [ label = "core:hasReliability" ];
+	"owl:Thing" -> "time:TemporalEntity" [ label = "core:isValidDuringPeriod" ];
+	"owl:Thing" -> "xsd:integer" [ label = "core:port" ];
+	"owl:Thing" -> "xsd:string" [ label = "core:ip" ];
 	"owl:Thing" -> "core:SmartContract" [ label = "core:hasSmartContract" ];
 	"owl:Thing" -> "xsd:float" [ label = "core:hasPoints" ];
-	"http://www.opengis.net/ont/geosparql#Feature" -> "http://www.opengis.net/ont/geosparql#Geometry" [ label = "http://www.opengis.net/ont/geosparql#hasGeometry" ];
-	"owl:Thing" -> "time:TemporalEntity" [ label = "core:hasDuration" ];
+	"owl:Thing" -> "xsd:boolean" [ label = "core:isAvailable" ];
+	"owl:Thing" -> "xsd:dateTimeStamp" [ label = "core:hasOccurrence" ];
 	"owl:Thing" -> "rdfs:Literal" [ label = "core:type" ];
+	"owl:Thing" -> "xsd:string" [ label = "core:implementsDRType" ];
+	"owl:Thing" -> "time:TemporalEntity" [ label = "core:hasDuration" ];
 	"core:Customer" -> "owl:Thing" [ label = "core:hasReward" ];
-	"owl:Thing" -> "time:TemporalEntity" [ label = "core:isValidDuringPeriod" ];
+	"owl:Thing" -> "xsd:float" [ label = "core:hasConstraint" ];
 
 }

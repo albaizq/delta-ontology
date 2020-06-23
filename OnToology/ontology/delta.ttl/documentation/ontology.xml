@@ -19,7 +19,7 @@
         <terms:creator>Andrea Cimmino</terms:creator>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
         <rdfs:comment>This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible.</rdfs:comment>
-        <owl:versionInfo>0.1.7</owl:versionInfo>
+        <owl:versionInfo>0.1.8</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -208,6 +208,16 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#hasRedundancy -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasRedundancy">
+        <rdfs:comment>Redundancy of  a FEID</rdfs:comment>
+        <rdfs:label>has redundancy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#hasReward -->
 
 
@@ -324,6 +334,26 @@
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#quantifiesKPI">
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/saref4city"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#requests -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#requests">
+        <rdfs:comment>Relationship between a DR request and the measurement of the property it needs</rdfs:comment>
+        <rdfs:label>requests</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#sendsRequest -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#sendsRequest">
+        <rdfs:comment>Relationship between a FEID and its request</rdfs:comment>
+        <rdfs:label>sends requests</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -486,11 +516,33 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#hasConstraint -->
+
+
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#hasConstraint">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>Constraint associated to a DR request</rdfs:comment>
+        <rdfs:label>has constraint</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#hasDescription -->
 
 
     <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#hasDescription">
         <rdfs:label>description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#hasOccurrence -->
+
+
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#hasOccurrence">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:comment>Date when a DR request is sent</rdfs:comment>
+        <rdfs:label>has occurrence</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -506,6 +558,15 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#hasReliability -->
+
+
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#hasReliability">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#href -->
 
 
@@ -516,11 +577,55 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#implementsDRType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#implementsDRType">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>DR type that is implemented by the FEID (e.g., implicit or explicit)</rdfs:comment>
+        <rdfs:label>implements DR type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#ip -->
+
+
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#ip">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>IP address of a thing</rdfs:comment>
+        <rdfs:label>ip</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#isAvailable -->
+
+
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#isAvailable">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Availability of a FEID</rdfs:comment>
+        <rdfs:label>is available</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#name -->
 
 
     <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#name">
         <rdfs:isDefinedBy>name</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#port -->
+
+
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#port">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Address of the service within the system.</rdfs:comment>
+        <rdfs:label>port</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -725,6 +830,34 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#DRRequest -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#DRRequest">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#requests"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasOccurrence"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Action that is requested by a FEID</rdfs:comment>
+        <rdfs:label>DR request</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#EnergyMarket -->
 
 
@@ -742,8 +875,20 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasRedundancy"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#Duration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#isLocatedAt"/>
                 <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Sector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#sendsRequest"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#DRRequest"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1002,6 +1147,12 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasReliability"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#href"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
             </owl:Restriction>
@@ -1049,6 +1200,13 @@
 
 
     <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Duration -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Duration"/>
     
 
 
@@ -1292,11 +1450,22 @@
     
 
 
-    <!-- http://delta.linkeddata.es/def/core#DownFlexibility -->
+    <!-- http://delta.linkeddata.es/def/core#ConsumptionCapacity -->
 
 
-    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#DownFlexibility">
-        <rdfs:label>Down flexibility</rdfs:label>
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#ConsumptionCapacity">
+        <rdf:type rdf:resource="https://w3id.org/saref#Power"/>
+        <rdfs:label>Consumption capacity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#ContractedPower -->
+
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#ContractedPower">
+        <rdf:type rdf:resource="https://w3id.org/saref#Power"/>
+        <rdfs:label>Contracted power</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1307,6 +1476,16 @@
     <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#EnergyConsumption">
         <rdf:type rdf:resource="https://w3id.org/saref#Energy"/>
         <rdfs:label>Energy consumption</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#EnergyDownFlexibility -->
+
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#EnergyDownFlexibility">
+        <rdf:type rdf:resource="https://w3id.org/saref#Energy"/>
+        <rdfs:label>Energy down flexibility</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1337,6 +1516,26 @@
     <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#EnergyLoadForecast">
         <rdf:type rdf:resource="https://w3id.org/saref#Energy"/>
         <rdfs:label>Energy load forecast</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#EnergyUpFlexibility -->
+
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#EnergyUpFlexibility">
+        <rdf:type rdf:resource="https://w3id.org/saref#Energy"/>
+        <rdfs:label>Energy up flexibility</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#GenerationCapacity -->
+
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#GenerationCapacity">
+        <rdf:type rdf:resource="https://w3id.org/saref#Power"/>
+        <rdfs:label>Generation capacity</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1402,16 +1601,17 @@
     
 
 
-    <!-- http://delta.linkeddata.es/def/core#UpFlexibility -->
+    <!-- http://delta.linkeddata.es/def/core#StorageCapacity -->
 
 
-    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#UpFlexibility">
-        <rdfs:label>Up flexibility</rdfs:label>
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#StorageCapacity">
+        <rdf:type rdf:resource="https://w3id.org/saref#Energy"/>
+        <rdfs:label>Storage capacity</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/ -->
+<!-- Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/ -->
 
 

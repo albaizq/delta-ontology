@@ -6,7 +6,7 @@
 <http://delta.linkeddata.es/def/core> <http://purl.org/dc/terms/creator> "Andrea Cimmino" .
 <http://delta.linkeddata.es/def/core> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
 <http://delta.linkeddata.es/def/core> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible." .
-<http://delta.linkeddata.es/def/core> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.7" .
+<http://delta.linkeddata.es/def/core> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.8" .
 # 
 # 
 # #################################################################
@@ -100,6 +100,11 @@
 <http://delta.linkeddata.es/def/core#hasProfile> <http://www.w3.org/2000/01/rdf-schema#comment> "Link between an entity and its profile" .
 <http://delta.linkeddata.es/def/core#hasProfile> <http://www.w3.org/2000/01/rdf-schema#label> "has profile" .
 # 
+# http://delta.linkeddata.es/def/core#hasRedundancy
+<http://delta.linkeddata.es/def/core#hasRedundancy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://delta.linkeddata.es/def/core#hasRedundancy> <http://www.w3.org/2000/01/rdf-schema#comment> "Redundancy of  a FEID" .
+<http://delta.linkeddata.es/def/core#hasRedundancy> <http://www.w3.org/2000/01/rdf-schema#label> "has redundancy" .
+# 
 # http://delta.linkeddata.es/def/core#hasReward
 <http://delta.linkeddata.es/def/core#hasReward> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://delta.linkeddata.es/def/core#hasReward> <http://www.w3.org/2000/01/rdf-schema#domain> <http://delta.linkeddata.es/def/core#Customer> .
@@ -159,6 +164,16 @@
 # http://delta.linkeddata.es/def/core#quantifiesKPI
 <http://delta.linkeddata.es/def/core#quantifiesKPI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://delta.linkeddata.es/def/core#quantifiesKPI> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/saref4city> .
+# 
+# http://delta.linkeddata.es/def/core#requests
+<http://delta.linkeddata.es/def/core#requests> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://delta.linkeddata.es/def/core#requests> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a DR request and the measurement of the property it needs" .
+<http://delta.linkeddata.es/def/core#requests> <http://www.w3.org/2000/01/rdf-schema#label> "requests" .
+# 
+# http://delta.linkeddata.es/def/core#sendsRequest
+<http://delta.linkeddata.es/def/core#sendsRequest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://delta.linkeddata.es/def/core#sendsRequest> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a FEID and its request" .
+<http://delta.linkeddata.es/def/core#sendsRequest> <http://www.w3.org/2000/01/rdf-schema#label> "sends requests" .
 # 
 # http://www.opengis.net/ont/geosparql#hasGeometry
 <http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -243,9 +258,21 @@
 <http://delta.linkeddata.es/def/core#granularity> <http://www.w3.org/2000/01/rdf-schema#comment> "granularity of the profile (e.g., weekly, daily)" .
 <http://delta.linkeddata.es/def/core#granularity> <http://www.w3.org/2000/01/rdf-schema#label> "granularity" .
 # 
+# http://delta.linkeddata.es/def/core#hasConstraint
+<http://delta.linkeddata.es/def/core#hasConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://delta.linkeddata.es/def/core#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://delta.linkeddata.es/def/core#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Constraint associated to a DR request" .
+<http://delta.linkeddata.es/def/core#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "has constraint" .
+# 
 # http://delta.linkeddata.es/def/core#hasDescription
 <http://delta.linkeddata.es/def/core#hasDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://delta.linkeddata.es/def/core#hasDescription> <http://www.w3.org/2000/01/rdf-schema#label> "description" .
+# 
+# http://delta.linkeddata.es/def/core#hasOccurrence
+<http://delta.linkeddata.es/def/core#hasOccurrence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://delta.linkeddata.es/def/core#hasOccurrence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<http://delta.linkeddata.es/def/core#hasOccurrence> <http://www.w3.org/2000/01/rdf-schema#comment> "Date when a DR request is sent" .
+<http://delta.linkeddata.es/def/core#hasOccurrence> <http://www.w3.org/2000/01/rdf-schema#label> "has occurrence" .
 # 
 # http://delta.linkeddata.es/def/core#hasPoints
 <http://delta.linkeddata.es/def/core#hasPoints> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -253,14 +280,42 @@
 <http://delta.linkeddata.es/def/core#hasPoints> <http://www.w3.org/2000/01/rdf-schema#comment> "Points that are used by the DELTA platform to calculate the customers rewards" .
 <http://delta.linkeddata.es/def/core#hasPoints> <http://www.w3.org/2000/01/rdf-schema#label> "has points" .
 # 
+# http://delta.linkeddata.es/def/core#hasReliability
+<http://delta.linkeddata.es/def/core#hasReliability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://delta.linkeddata.es/def/core#hasReliability> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
 # http://delta.linkeddata.es/def/core#href
 <http://delta.linkeddata.es/def/core#href> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://delta.linkeddata.es/def/core#href> <http://www.w3.org/2000/01/rdf-schema#comment> "URI of the endpoint" .
 <http://delta.linkeddata.es/def/core#href> <http://www.w3.org/2000/01/rdf-schema#label> "href" .
 # 
+# http://delta.linkeddata.es/def/core#implementsDRType
+<http://delta.linkeddata.es/def/core#implementsDRType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://delta.linkeddata.es/def/core#implementsDRType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://delta.linkeddata.es/def/core#implementsDRType> <http://www.w3.org/2000/01/rdf-schema#comment> "DR type that is implemented by the FEID (e.g., implicit or explicit)" .
+<http://delta.linkeddata.es/def/core#implementsDRType> <http://www.w3.org/2000/01/rdf-schema#label> "implements DR type" .
+# 
+# http://delta.linkeddata.es/def/core#ip
+<http://delta.linkeddata.es/def/core#ip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://delta.linkeddata.es/def/core#ip> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://delta.linkeddata.es/def/core#ip> <http://www.w3.org/2000/01/rdf-schema#comment> "IP address of a thing" .
+<http://delta.linkeddata.es/def/core#ip> <http://www.w3.org/2000/01/rdf-schema#label> "ip" .
+# 
+# http://delta.linkeddata.es/def/core#isAvailable
+<http://delta.linkeddata.es/def/core#isAvailable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://delta.linkeddata.es/def/core#isAvailable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://delta.linkeddata.es/def/core#isAvailable> <http://www.w3.org/2000/01/rdf-schema#comment> "Availability of a FEID" .
+<http://delta.linkeddata.es/def/core#isAvailable> <http://www.w3.org/2000/01/rdf-schema#label> "is available" .
+# 
 # http://delta.linkeddata.es/def/core#name
 <http://delta.linkeddata.es/def/core#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://delta.linkeddata.es/def/core#name> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "name" .
+# 
+# http://delta.linkeddata.es/def/core#port
+<http://delta.linkeddata.es/def/core#port> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://delta.linkeddata.es/def/core#port> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://delta.linkeddata.es/def/core#port> <http://www.w3.org/2000/01/rdf-schema#comment> "Address of the service within the system." .
+<http://delta.linkeddata.es/def/core#port> <http://www.w3.org/2000/01/rdf-schema#label> "port" .
 # 
 # http://delta.linkeddata.es/def/core#sectorName
 <http://delta.linkeddata.es/def/core#sectorName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -377,6 +432,23 @@ _:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002
 <http://delta.linkeddata.es/def/core#CustomerCluster> <http://www.w3.org/2000/01/rdf-schema#comment> "Groups of customers" .
 <http://delta.linkeddata.es/def/core#CustomerCluster> <http://www.w3.org/2000/01/rdf-schema#label> "Customer cluster" .
 # 
+# http://delta.linkeddata.es/def/core#DRRequest
+<http://delta.linkeddata.es/def/core#DRRequest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://delta.linkeddata.es/def/core#DRRequest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#requests> .
+_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://delta.linkeddata.es/def/core#Measurement> .
+<http://delta.linkeddata.es/def/core#DRRequest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#hasConstraint> .
+_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+<http://delta.linkeddata.es/def/core#DRRequest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#hasOccurrence> .
+_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<http://delta.linkeddata.es/def/core#DRRequest> <http://www.w3.org/2000/01/rdf-schema#comment> "Action that is requested by a FEID" .
+<http://delta.linkeddata.es/def/core#DRRequest> <http://www.w3.org/2000/01/rdf-schema#label> "DR request" .
+# 
 # http://delta.linkeddata.es/def/core#EnergyMarket
 <http://delta.linkeddata.es/def/core#EnergyMarket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://delta.linkeddata.es/def/core#EnergyMarket> <http://www.w3.org/2000/01/rdf-schema#label> "Energy Market" .
@@ -385,30 +457,38 @@ _:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002
 <http://delta.linkeddata.es/def/core#FEID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://delta.linkeddata.es/def/core#FEID> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/openadr#VEN> .
 <http://delta.linkeddata.es/def/core#FEID> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Device> .
-<http://delta.linkeddata.es/def/core#FEID> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#isLocatedAt> .
-_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://delta.linkeddata.es/def/core#Sector> .
-<http://delta.linkeddata.es/def/core#FEID> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#consistsOf> .
-_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://delta.linkeddata.es/def/core#Asset> .
-<http://delta.linkeddata.es/def/core#FEID> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#hasComfortSetting> .
-_:genid14 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://delta.linkeddata.es/def/core#ComfortSetting> .
 <http://delta.linkeddata.es/def/core#FEID> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
 _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#hasSystemConstraint> .
-_:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://delta.linkeddata.es/def/core#SystemConstraint> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#hasRedundancy> .
+_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2006/time#Duration> .
 <http://delta.linkeddata.es/def/core#FEID> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
 _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#hasTransaction> .
-_:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://delta.linkeddata.es/def/core#Transaction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#isLocatedAt> .
+_:genid16 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://delta.linkeddata.es/def/core#Sector> .
 <http://delta.linkeddata.es/def/core#FEID> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
 _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#href> .
-_:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#sendsRequest> .
+_:genid17 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://delta.linkeddata.es/def/core#DRRequest> .
+<http://delta.linkeddata.es/def/core#FEID> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#consistsOf> .
+_:genid18 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://delta.linkeddata.es/def/core#Asset> .
+<http://delta.linkeddata.es/def/core#FEID> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#hasComfortSetting> .
+_:genid19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://delta.linkeddata.es/def/core#ComfortSetting> .
+<http://delta.linkeddata.es/def/core#FEID> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#hasSystemConstraint> .
+_:genid20 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://delta.linkeddata.es/def/core#SystemConstraint> .
+<http://delta.linkeddata.es/def/core#FEID> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#hasTransaction> .
+_:genid21 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://delta.linkeddata.es/def/core#Transaction> .
+<http://delta.linkeddata.es/def/core#FEID> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#href> .
+_:genid22 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
 <http://delta.linkeddata.es/def/core#FEID> <http://www.w3.org/2000/01/rdf-schema#comment> "Set of devices" .
 <http://delta.linkeddata.es/def/core#FEID> <http://www.w3.org/2000/01/rdf-schema#label> "FEID" .
 # 
@@ -434,18 +514,18 @@ _:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 # http://delta.linkeddata.es/def/core#Measurement
 <http://delta.linkeddata.es/def/core#Measurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://delta.linkeddata.es/def/core#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Measurement> .
-<http://delta.linkeddata.es/def/core#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#hasPhase> .
-_:genid18 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://delta.linkeddata.es/def/core#Phase> .
+<http://delta.linkeddata.es/def/core#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#hasPhase> .
+_:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://delta.linkeddata.es/def/core#Phase> .
 # 
 # http://delta.linkeddata.es/def/core#Payment
 <http://delta.linkeddata.es/def/core#Payment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://delta.linkeddata.es/def/core#Payment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Price> .
-<http://delta.linkeddata.es/def/core#Payment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#status> .
-_:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://delta.linkeddata.es/def/core#Payment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#status> .
+_:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <http://delta.linkeddata.es/def/core#Payment> <http://www.w3.org/2000/01/rdf-schema#comment> "Monetary value associated to a contract" .
 <http://delta.linkeddata.es/def/core#Payment> <http://www.w3.org/2000/01/rdf-schema#label> "Payment" .
 # 
@@ -456,14 +536,14 @@ _:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000
 # http://delta.linkeddata.es/def/core#Profile
 <http://delta.linkeddata.es/def/core#Profile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://delta.linkeddata.es/def/core#Profile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Profile> .
-<http://delta.linkeddata.es/def/core#Profile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/openadr#hasDuration> .
-_:genid20 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2006/time#TemporalEntity> .
-<http://delta.linkeddata.es/def/core#Profile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#granularity> .
-_:genid21 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#rational> .
+<http://delta.linkeddata.es/def/core#Profile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/openadr#hasDuration> .
+_:genid25 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2006/time#TemporalEntity> .
+<http://delta.linkeddata.es/def/core#Profile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#granularity> .
+_:genid26 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#rational> .
 <http://delta.linkeddata.es/def/core#Profile> <http://www.w3.org/2000/01/rdf-schema#comment> "A specification associated to a Virtual Node or a device to collect information about properties" .
 <http://delta.linkeddata.es/def/core#Profile> <http://www.w3.org/2000/01/rdf-schema#label> "Profile" .
 # 
@@ -483,27 +563,27 @@ _:genid21 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002
 # http://delta.linkeddata.es/def/core#Sector
 <http://delta.linkeddata.es/def/core#Sector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://delta.linkeddata.es/def/core#Sector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
-<http://delta.linkeddata.es/def/core#Sector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#sectorName> .
-_:genid22 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://delta.linkeddata.es/def/core#Sector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#sectorName> .
+_:genid27 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
 <http://delta.linkeddata.es/def/core#Sector> <http://www.w3.org/2000/01/rdf-schema#comment> "A section or zone" .
 <http://delta.linkeddata.es/def/core#Sector> <http://www.w3.org/2000/01/rdf-schema#label> "Sector" .
 # 
 # http://delta.linkeddata.es/def/core#SmartContract
 <http://delta.linkeddata.es/def/core#SmartContract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://delta.linkeddata.es/def/core#SmartContract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#agreesOn> .
-_:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/saref#Property> .
-<http://delta.linkeddata.es/def/core#SmartContract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#isValidDuringPeriod> .
-_:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2006/time#TemporalEntity> .
-<http://delta.linkeddata.es/def/core#SmartContract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#hasPayment> .
-_:genid25 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://delta.linkeddata.es/def/core#Payment> .
+<http://delta.linkeddata.es/def/core#SmartContract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#agreesOn> .
+_:genid28 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/saref#Property> .
+<http://delta.linkeddata.es/def/core#SmartContract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#isValidDuringPeriod> .
+_:genid29 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2006/time#TemporalEntity> .
+<http://delta.linkeddata.es/def/core#SmartContract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#hasPayment> .
+_:genid30 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://delta.linkeddata.es/def/core#Payment> .
 <http://delta.linkeddata.es/def/core#SmartContract> <http://www.w3.org/2000/01/rdf-schema#label> "Smart contract" .
 # 
 # http://delta.linkeddata.es/def/core#SystemConstraint
@@ -519,26 +599,30 @@ _:genid25 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://delta.linkeddata
 <http://delta.linkeddata.es/def/core#VirtualNode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://delta.linkeddata.es/def/core#VirtualNode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/openadr#VEN> .
 <http://delta.linkeddata.es/def/core#VirtualNode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/openadr#VTN> .
-<http://delta.linkeddata.es/def/core#VirtualNode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#hasIndex> .
-_:genid26 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://delta.linkeddata.es/def/core#Index> .
-<http://delta.linkeddata.es/def/core#VirtualNode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#hasSmartContract> .
-_:genid27 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://delta.linkeddata.es/def/core#SmartContract> .
-<http://delta.linkeddata.es/def/core#VirtualNode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#isAllocatedIn> .
-_:genid28 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://delta.linkeddata.es/def/core#Aggregator> .
-<http://delta.linkeddata.es/def/core#VirtualNode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#hasProfile> .
-_:genid29 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://delta.linkeddata.es/def/core#Profile> .
-<http://delta.linkeddata.es/def/core#VirtualNode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#href> .
-_:genid30 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#rational> .
+<http://delta.linkeddata.es/def/core#VirtualNode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#hasIndex> .
+_:genid31 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://delta.linkeddata.es/def/core#Index> .
+<http://delta.linkeddata.es/def/core#VirtualNode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#hasSmartContract> .
+_:genid32 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://delta.linkeddata.es/def/core#SmartContract> .
+<http://delta.linkeddata.es/def/core#VirtualNode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#isAllocatedIn> .
+_:genid33 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://delta.linkeddata.es/def/core#Aggregator> .
+<http://delta.linkeddata.es/def/core#VirtualNode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#hasProfile> .
+_:genid34 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://delta.linkeddata.es/def/core#Profile> .
+<http://delta.linkeddata.es/def/core#VirtualNode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#hasReliability> .
+_:genid35 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+<http://delta.linkeddata.es/def/core#VirtualNode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#href> .
+_:genid36 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#rational> .
 <http://delta.linkeddata.es/def/core#VirtualNode> <http://www.w3.org/2000/01/rdf-schema#comment> "An aggregated, virtual cluster of prosumers which will be perceived and acted upon as a single, large prosumer entity by the Aggregator. Prosumers entailed into each Virtual Node will have common characteristics, defined by their corresponding Aggregator." .
 <http://delta.linkeddata.es/def/core#VirtualNode> <http://www.w3.org/2000/01/rdf-schema#label> "Virtual node" .
 # 
@@ -562,6 +646,9 @@ _:genid30 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
 <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2006/time#Duration
+<http://www.w3.org/2006/time#Duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://www.w3.org/2006/time#Instant
 <http://www.w3.org/2006/time#Instant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -598,23 +685,23 @@ _:genid30 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002
 # 
 # https://w3id.org/def/saref4city#KeyPerformanceIndicator
 <https://w3id.org/def/saref4city#KeyPerformanceIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/saref4city#KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#quantifiesKPI> .
-_:genid31 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4city#KeyPerformanceIndicator> .
-<https://w3id.org/def/saref4city#KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#isDerivedFrom> .
-_:genid32 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Measurement> .
+<https://w3id.org/def/saref4city#KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#quantifiesKPI> .
+_:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4city#KeyPerformanceIndicator> .
+<https://w3id.org/def/saref4city#KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#isDerivedFrom> .
+_:genid38 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Measurement> .
 <https://w3id.org/def/saref4city#KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/saref4city> .
 <https://w3id.org/def/saref4city#KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#label> "Key Performance Indicator" .
 # 
 # https://w3id.org/saref#Device
 <https://w3id.org/saref#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/saref#Device> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid33 .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#measuresProperty> .
-_:genid33 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Property> .
+<https://w3id.org/saref#Device> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#measuresProperty> .
+_:genid39 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Property> .
 <https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
 <https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#comment> "A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function. Devices can be structured in categories (subclasses) that reflect the different domain in which a device is used, e.g., smart appliances domain (subclass FunctionRelated) vs. building domain (subclass BuildingRelated) vs. smart grid domain (subclass EnergyRelated). New categories can be defined,if needed, to reflect other differences, for example different points of view, such as the point of view of the device's user vs. the point of view of the device's manufacturer. We propose a list of devices that are relevant for the purpose of SAREF, but this list can be extended." .
 <https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/def/saref#" .
@@ -623,10 +710,10 @@ _:genid33 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#
 # https://w3id.org/saref#Energy
 <https://w3id.org/saref#Energy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/saref#Energy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Property> .
-<https://w3id.org/saref#Energy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#hasIncentive> .
-_:genid34 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://delta.linkeddata.es/def/core#Incentive> .
+<https://w3id.org/saref#Energy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#hasIncentive> .
+_:genid40 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://delta.linkeddata.es/def/core#Incentive> .
 <https://w3id.org/saref#Energy> <http://www.w3.org/2000/01/rdf-schema#comment> "A property related to measurements that are characterized  by a value measured in energy units" .
 <https://w3id.org/saref#Energy> <http://www.w3.org/2000/01/rdf-schema#label> "Energy" .
 # 
@@ -637,22 +724,22 @@ _:genid34 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://delta.linkeddata
 # 
 # https://w3id.org/saref#Measurement
 <https://w3id.org/saref#Measurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasFeatureOfInterest> .
-_:genid35 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#FeatureOfInterest> .
-<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isMeasuredIn> .
-_:genid36 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#UnitOfMeasure> .
-<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasValue> .
-_:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
-<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
-_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#timeStamp> .
-_:genid38 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasFeatureOfInterest> .
+_:genid41 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#FeatureOfInterest> .
+<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isMeasuredIn> .
+_:genid42 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#UnitOfMeasure> .
+<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasValue> .
+_:genid43 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#timeStamp> .
+_:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/def/saref#" .
 <https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement" .
 # 
@@ -668,20 +755,20 @@ _:genid38 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 # 
 # https://w3id.org/saref#Profile
 <https://w3id.org/saref#Profile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/saref#Profile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
-_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isAbout> .
-_:genid39 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Property> .
+<https://w3id.org/saref#Profile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isAbout> .
+_:genid45 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Property> .
 <https://w3id.org/saref#Profile> <http://www.w3.org/2000/01/rdf-schema#comment> "A specification associated to a device to collect information about a certain Property (e.g., Energy) or Commodity (e.g.Water) for optimizing its usage in the home, office or building in which the device is located. This specification is about a certain Property or Commodity (saref:isAbout), can be calculated over a time span (saref:hasTime ) and can be associated to some costs (saref:hasPrice). An example is the Power Profile defined in the SAREF4ENER extension that can be associated to a device for optimizing the Energy efficiency in the home, office or building in which the device is located." .
 <https://w3id.org/saref#Profile> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/saref#" .
 <https://w3id.org/saref#Profile> <http://www.w3.org/2000/01/rdf-schema#label> "Profile" .
 # 
 # https://w3id.org/saref#Property
 <https://w3id.org/saref#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isRelatedToMeasurement> .
-_:genid40 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Measurement> .
+<https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isRelatedToMeasurement> .
+_:genid46 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Measurement> .
 <https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/def/saref#" .
 <https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property" .
 # 
@@ -698,14 +785,25 @@ _:genid40 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#
 # #################################################################
 # 
 # 
-# http://delta.linkeddata.es/def/core#DownFlexibility
-<http://delta.linkeddata.es/def/core#DownFlexibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://delta.linkeddata.es/def/core#DownFlexibility> <http://www.w3.org/2000/01/rdf-schema#label> "Down flexibility" .
+# http://delta.linkeddata.es/def/core#ConsumptionCapacity
+<http://delta.linkeddata.es/def/core#ConsumptionCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://delta.linkeddata.es/def/core#ConsumptionCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/saref#Power> .
+<http://delta.linkeddata.es/def/core#ConsumptionCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "Consumption capacity" .
+# 
+# http://delta.linkeddata.es/def/core#ContractedPower
+<http://delta.linkeddata.es/def/core#ContractedPower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://delta.linkeddata.es/def/core#ContractedPower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/saref#Power> .
+<http://delta.linkeddata.es/def/core#ContractedPower> <http://www.w3.org/2000/01/rdf-schema#label> "Contracted power" .
 # 
 # http://delta.linkeddata.es/def/core#EnergyConsumption
 <http://delta.linkeddata.es/def/core#EnergyConsumption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://delta.linkeddata.es/def/core#EnergyConsumption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/saref#Energy> .
 <http://delta.linkeddata.es/def/core#EnergyConsumption> <http://www.w3.org/2000/01/rdf-schema#label> "Energy consumption" .
+# 
+# http://delta.linkeddata.es/def/core#EnergyDownFlexibility
+<http://delta.linkeddata.es/def/core#EnergyDownFlexibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://delta.linkeddata.es/def/core#EnergyDownFlexibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/saref#Energy> .
+<http://delta.linkeddata.es/def/core#EnergyDownFlexibility> <http://www.w3.org/2000/01/rdf-schema#label> "Energy down flexibility" .
 # 
 # http://delta.linkeddata.es/def/core#EnergyGeneration
 <http://delta.linkeddata.es/def/core#EnergyGeneration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -721,6 +819,16 @@ _:genid40 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#
 <http://delta.linkeddata.es/def/core#EnergyLoadForecast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://delta.linkeddata.es/def/core#EnergyLoadForecast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/saref#Energy> .
 <http://delta.linkeddata.es/def/core#EnergyLoadForecast> <http://www.w3.org/2000/01/rdf-schema#label> "Energy load forecast" .
+# 
+# http://delta.linkeddata.es/def/core#EnergyUpFlexibility
+<http://delta.linkeddata.es/def/core#EnergyUpFlexibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://delta.linkeddata.es/def/core#EnergyUpFlexibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/saref#Energy> .
+<http://delta.linkeddata.es/def/core#EnergyUpFlexibility> <http://www.w3.org/2000/01/rdf-schema#label> "Energy up flexibility" .
+# 
+# http://delta.linkeddata.es/def/core#GenerationCapacity
+<http://delta.linkeddata.es/def/core#GenerationCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://delta.linkeddata.es/def/core#GenerationCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/saref#Power> .
+<http://delta.linkeddata.es/def/core#GenerationCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "Generation capacity" .
 # 
 # http://delta.linkeddata.es/def/core#PowerConsumption
 <http://delta.linkeddata.es/def/core#PowerConsumption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -751,8 +859,9 @@ _:genid40 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#
 # http://delta.linkeddata.es/def/core#PriceIntraDay
 <http://delta.linkeddata.es/def/core#PriceIntraDay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 # 
-# http://delta.linkeddata.es/def/core#UpFlexibility
-<http://delta.linkeddata.es/def/core#UpFlexibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://delta.linkeddata.es/def/core#UpFlexibility> <http://www.w3.org/2000/01/rdf-schema#label> "Up flexibility" .
+# http://delta.linkeddata.es/def/core#StorageCapacity
+<http://delta.linkeddata.es/def/core#StorageCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://delta.linkeddata.es/def/core#StorageCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/saref#Energy> .
+<http://delta.linkeddata.es/def/core#StorageCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "Storage capacity" .
 # 
-# Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
+# Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/

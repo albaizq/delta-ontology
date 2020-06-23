@@ -14,7 +14,7 @@
                                                                           "Andrea Cimmino" ;
                                        <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                        rdfs:comment "This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible." ;
-                                       owl:versionInfo "0.1.7" .
+                                       owl:versionInfo "0.1.8" .
 
 #################################################################
 #    Annotation properties
@@ -117,6 +117,12 @@
             rdfs:label "has profile" .
 
 
+###  http://delta.linkeddata.es/def/core#hasRedundancy
+:hasRedundancy rdf:type owl:ObjectProperty ;
+               rdfs:comment "Redundancy of  a FEID" ;
+               rdfs:label "has redundancy" .
+
+
 ###  http://delta.linkeddata.es/def/core#hasReward
 :hasReward rdf:type owl:ObjectProperty ;
            rdfs:domain :Customer ;
@@ -187,6 +193,18 @@
 ###  http://delta.linkeddata.es/def/core#quantifiesKPI
 :quantifiesKPI rdf:type owl:ObjectProperty ;
                rdfs:isDefinedBy <https://w3id.org/def/saref4city> .
+
+
+###  http://delta.linkeddata.es/def/core#requests
+:requests rdf:type owl:ObjectProperty ;
+          rdfs:comment "Relationship between a DR request and the measurement of the property it needs" ;
+          rdfs:label "requests" .
+
+
+###  http://delta.linkeddata.es/def/core#sendsRequest
+:sendsRequest rdf:type owl:ObjectProperty ;
+              rdfs:comment "Relationship between a FEID and its request" ;
+              rdfs:label "sends requests" .
 
 
 ###  http://www.opengis.net/ont/geosparql#hasGeometry
@@ -282,9 +300,23 @@
              rdfs:label "granularity" .
 
 
+###  http://delta.linkeddata.es/def/core#hasConstraint
+:hasConstraint rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:float ;
+               rdfs:comment "Constraint associated to a DR request" ;
+               rdfs:label "has constraint" .
+
+
 ###  http://delta.linkeddata.es/def/core#hasDescription
 :hasDescription rdf:type owl:DatatypeProperty ;
                 rdfs:label "description" .
+
+
+###  http://delta.linkeddata.es/def/core#hasOccurrence
+:hasOccurrence rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:dateTimeStamp ;
+               rdfs:comment "Date when a DR request is sent" ;
+               rdfs:label "has occurrence" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasPoints
@@ -294,15 +326,48 @@
            rdfs:label "has points" .
 
 
+###  http://delta.linkeddata.es/def/core#hasReliability
+:hasReliability rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:float .
+
+
 ###  http://delta.linkeddata.es/def/core#href
 :href rdf:type owl:DatatypeProperty ;
       rdfs:comment "URI of the endpoint" ;
       rdfs:label "href" .
 
 
+###  http://delta.linkeddata.es/def/core#implementsDRType
+:implementsDRType rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "DR type that is implemented by the FEID (e.g., implicit or explicit)" ;
+                  rdfs:label "implements DR type" .
+
+
+###  http://delta.linkeddata.es/def/core#ip
+:ip rdf:type owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:comment "IP address of a thing" ;
+    rdfs:label "ip" .
+
+
+###  http://delta.linkeddata.es/def/core#isAvailable
+:isAvailable rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:boolean ;
+             rdfs:comment "Availability of a FEID" ;
+             rdfs:label "is available" .
+
+
 ###  http://delta.linkeddata.es/def/core#name
 :name rdf:type owl:DatatypeProperty ;
       rdfs:isDefinedBy "name" .
+
+
+###  http://delta.linkeddata.es/def/core#port
+:port rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:integer ;
+      rdfs:comment "Address of the service within the system." ;
+      rdfs:label "port" .
 
 
 ###  http://delta.linkeddata.es/def/core#sectorName
@@ -427,6 +492,24 @@
                  rdfs:label "Customer cluster" .
 
 
+###  http://delta.linkeddata.es/def/core#DRRequest
+:DRRequest rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :requests ;
+                             owl:someValuesFrom :Measurement
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasConstraint ;
+                             owl:someValuesFrom xsd:float
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasOccurrence ;
+                             owl:someValuesFrom xsd:dateTimeStamp
+                           ] ;
+           rdfs:comment "Action that is requested by a FEID" ;
+           rdfs:label "DR request" .
+
+
 ###  http://delta.linkeddata.es/def/core#EnergyMarket
 :EnergyMarket rdf:type owl:Class ;
               rdfs:label "Energy Market" .
@@ -437,8 +520,16 @@
       rdfs:subClassOf <https://w3id.org/def/openadr#VEN> ,
                       <https://w3id.org/saref#Device> ,
                       [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasRedundancy ;
+                        owl:someValuesFrom <http://www.w3.org/2006/time#Duration>
+                      ] ,
+                      [ rdf:type owl:Restriction ;
                         owl:onProperty :isLocatedAt ;
                         owl:someValuesFrom :Sector
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :sendsRequest ;
+                        owl:someValuesFrom :DRRequest
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty <https://w3id.org/saref#consistsOf> ;
@@ -602,6 +693,10 @@
                                owl:allValuesFrom :Profile
                              ] ,
                              [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasReliability ;
+                               owl:someValuesFrom xsd:float
+                             ] ,
+                             [ rdf:type owl:Restriction ;
                                owl:onProperty :href ;
                                owl:someValuesFrom owl:rational
                              ] ;
@@ -632,6 +727,10 @@
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
 <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#Duration
+<http://www.w3.org/2006/time#Duration> rdf:type owl:Class .
 
 
 ###  http://www.w3.org/2006/time#Instant
@@ -781,15 +880,28 @@
 #    Individuals
 #################################################################
 
-###  http://delta.linkeddata.es/def/core#DownFlexibility
-:DownFlexibility rdf:type owl:NamedIndividual ;
-                 rdfs:label "Down flexibility" .
+###  http://delta.linkeddata.es/def/core#ConsumptionCapacity
+:ConsumptionCapacity rdf:type owl:NamedIndividual ,
+                              <https://w3id.org/saref#Power> ;
+                     rdfs:label "Consumption capacity" .
+
+
+###  http://delta.linkeddata.es/def/core#ContractedPower
+:ContractedPower rdf:type owl:NamedIndividual ,
+                          <https://w3id.org/saref#Power> ;
+                 rdfs:label "Contracted power" .
 
 
 ###  http://delta.linkeddata.es/def/core#EnergyConsumption
 :EnergyConsumption rdf:type owl:NamedIndividual ,
                             <https://w3id.org/saref#Energy> ;
                    rdfs:label "Energy consumption" .
+
+
+###  http://delta.linkeddata.es/def/core#EnergyDownFlexibility
+:EnergyDownFlexibility rdf:type owl:NamedIndividual ,
+                                <https://w3id.org/saref#Energy> ;
+                       rdfs:label "Energy down flexibility" .
 
 
 ###  http://delta.linkeddata.es/def/core#EnergyGeneration
@@ -808,6 +920,18 @@
 :EnergyLoadForecast rdf:type owl:NamedIndividual ,
                              <https://w3id.org/saref#Energy> ;
                     rdfs:label "Energy load forecast" .
+
+
+###  http://delta.linkeddata.es/def/core#EnergyUpFlexibility
+:EnergyUpFlexibility rdf:type owl:NamedIndividual ,
+                              <https://w3id.org/saref#Energy> ;
+                     rdfs:label "Energy up flexibility" .
+
+
+###  http://delta.linkeddata.es/def/core#GenerationCapacity
+:GenerationCapacity rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/saref#Power> ;
+                    rdfs:label "Generation capacity" .
 
 
 ###  http://delta.linkeddata.es/def/core#PowerConsumption
@@ -846,9 +970,10 @@
 :PriceIntraDay rdf:type owl:NamedIndividual .
 
 
-###  http://delta.linkeddata.es/def/core#UpFlexibility
-:UpFlexibility rdf:type owl:NamedIndividual ;
-               rdfs:label "Up flexibility" .
+###  http://delta.linkeddata.es/def/core#StorageCapacity
+:StorageCapacity rdf:type owl:NamedIndividual ,
+                          <https://w3id.org/saref#Energy> ;
+                 rdfs:label "Storage capacity" .
 
 
-###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
+###  Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/

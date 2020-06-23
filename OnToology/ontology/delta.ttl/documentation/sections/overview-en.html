@@ -1,4 +1,4 @@
-<html><h2 id="overv" class="list">DELTA ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<h2 id="overv" class="list">DELTA ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
 This ontology has the following classes and properties.</span>
 <h4>Classes</h4>
@@ -28,6 +28,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#https://w3id.org/saref#Device" title="https://w3id.org/saref#Device">Device</a>
+   </li>
+   <li>
+      <a href="#DRRequest" title="http://delta.linkeddata.es/def/core#DRRequest">DR request</a>
    </li>
    <li>
       <a href="#https://w3id.org/saref#Energy" title="https://w3id.org/saref#Energy">Energy</a>
@@ -187,6 +190,10 @@ This ontology has the following classes and properties.</span>
       <a href="#hasProfile" title="http://delta.linkeddata.es/def/core#hasProfile">has profile</a>
    </li>
    <li>
+      <a href="#hasRedundancy"
+         title="http://delta.linkeddata.es/def/core#hasRedundancy">has redundancy</a>
+   </li>
+   <li>
       <a href="#hasReward" title="http://delta.linkeddata.es/def/core#hasReward">has reward</a>
    </li>
    <li>
@@ -252,6 +259,12 @@ This ontology has the following classes and properties.</span>
          <span>quantifies k p i</span>
       </a>
    </li>
+   <li>
+      <a href="#requests" title="http://delta.linkeddata.es/def/core#requests">requests</a>
+   </li>
+   <li>
+      <a href="#sendsRequest" title="http://delta.linkeddata.es/def/core#sendsRequest">sends requests</a>
+   </li>
 </ul><h4>Data Properties</h4><ul class="hlist">
    <li>
       <a href="#clusterDescription"
@@ -268,7 +281,21 @@ This ontology has the following classes and properties.</span>
       <a href="#granularity" title="http://delta.linkeddata.es/def/core#granularity">granularity</a>
    </li>
    <li>
+      <a href="#hasConstraint"
+         title="http://delta.linkeddata.es/def/core#hasConstraint">has constraint</a>
+   </li>
+   <li>
+      <a href="#hasOccurrence"
+         title="http://delta.linkeddata.es/def/core#hasOccurrence">has occurrence</a>
+   </li>
+   <li>
       <a href="#hasPoints" title="http://delta.linkeddata.es/def/core#hasPoints">has points</a>
+   </li>
+   <li>
+      <a href="#hasReliability"
+         title="http://delta.linkeddata.es/def/core#hasReliability">
+         <span>has reliability</span>
+      </a>
    </li>
    <li>
       <a href="#https://w3id.org/saref#hasValue" title="https://w3id.org/saref#hasValue">has value</a>
@@ -277,9 +304,22 @@ This ontology has the following classes and properties.</span>
       <a href="#href" title="http://delta.linkeddata.es/def/core#href">href</a>
    </li>
    <li>
+      <a href="#implementsDRType"
+         title="http://delta.linkeddata.es/def/core#implementsDRType">implements DR type</a>
+   </li>
+   <li>
+      <a href="#ip" title="http://delta.linkeddata.es/def/core#ip">ip</a>
+   </li>
+   <li>
+      <a href="#isAvailable" title="http://delta.linkeddata.es/def/core#isAvailable">is available</a>
+   </li>
+   <li>
       <a href="#name" title="http://delta.linkeddata.es/def/core#name">
          <span>name</span>
       </a>
+   </li>
+   <li>
+      <a href="#port" title="http://delta.linkeddata.es/def/core#port">port</a>
    </li>
    <li>
       <a href="#sectorName" title="http://delta.linkeddata.es/def/core#sectorName">sector name</a>
@@ -295,12 +335,20 @@ This ontology has the following classes and properties.</span>
    </li>
 </ul><h4>Named Individuals</h4><ul class="hlist">
    <li>
-      <a href="#DownFlexibility"
-         title="http://delta.linkeddata.es/def/core#DownFlexibility">Down flexibility</a>
+      <a href="#ConsumptionCapacity"
+         title="http://delta.linkeddata.es/def/core#ConsumptionCapacity">Consumption capacity</a>
+   </li>
+   <li>
+      <a href="#ContractedPower"
+         title="http://delta.linkeddata.es/def/core#ContractedPower">Contracted power</a>
    </li>
    <li>
       <a href="#EnergyConsumption"
          title="http://delta.linkeddata.es/def/core#EnergyConsumption">Energy consumption</a>
+   </li>
+   <li>
+      <a href="#EnergyDownFlexibility"
+         title="http://delta.linkeddata.es/def/core#EnergyDownFlexibility">Energy down flexibility</a>
    </li>
    <li>
       <a href="#EnergyGeneration"
@@ -313,6 +361,14 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#EnergyLoadForecast"
          title="http://delta.linkeddata.es/def/core#EnergyLoadForecast">Energy load forecast</a>
+   </li>
+   <li>
+      <a href="#EnergyUpFlexibility"
+         title="http://delta.linkeddata.es/def/core#EnergyUpFlexibility">Energy up flexibility</a>
+   </li>
+   <li>
+      <a href="#GenerationCapacity"
+         title="http://delta.linkeddata.es/def/core#GenerationCapacity">Generation capacity</a>
    </li>
    <li>
       <a href="#PowerConsumption"
@@ -331,7 +387,7 @@ This ontology has the following classes and properties.</span>
          title="http://delta.linkeddata.es/def/core#PowerLoadForecast">Power load forecast</a>
    </li>
    <li>
-      <a href="#UpFlexibility"
-         title="http://delta.linkeddata.es/def/core#UpFlexibility">Up flexibility</a>
+      <a href="#StorageCapacity"
+         title="http://delta.linkeddata.es/def/core#StorageCapacity">Storage capacity</a>
    </li>
-</ul></html>
+</ul>
