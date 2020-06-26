@@ -1,27 +1,27 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "https://w3id.org/def/openadr#VEN" "time:Instant" "core:Frequency" "core:Customer" "saref:Profile" "core:VirtualNode" "saref:Power" "core:Sector" "saref:Energy" "https://w3id.org/def/openadr#VTN" "saref:Device" "core:Consumer" "core:Aggregator" "core:Measurement" "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" "core:Prosumer" "https://w3id.org/def/openadr#Asset" "saref:Measurement" "core:Reward" "time:TemporalEntity" "saref:Price" "core:Asset" "http://www.opengis.net/ont/geosparql#Feature" "core:Voltage" "saref:Property" "core:Profile" "core:FEID" "core:Payment" ; /*classes style*/
-	"saref:Price" -> "saref:Property" [ label = "rdfs:subClassOf" ];
-	"core:Payment" -> "saref:Price" [ label = "rdfs:subClassOf" ];
-	"core:Measurement" -> "saref:Measurement" [ label = "rdfs:subClassOf" ];
+node [shape = rectangle, color="black"]; ":Measurement" ":Price" "https://w3id.org/def/openadr#VEN" "time:Instant" "core:Frequency" "core:Customer" "core:VirtualNode" ":Device" "core:Sector" "https://w3id.org/def/openadr#VTN" ":Energy" "core:Consumer" "core:Aggregator" "core:Measurement" "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" "core:Prosumer" "https://w3id.org/def/openadr#Asset" "core:Reward" "time:TemporalEntity" ":Profile" "core:Asset" "http://www.opengis.net/ont/geosparql#Feature" ":Power" "core:Voltage" "core:Profile" ":Property" "core:FEID" "core:Payment" ; /*classes style*/
+	":Energy" -> ":Property" [ label = "rdfs:subClassOf" ];
+	"core:Payment" -> ":Price" [ label = "rdfs:subClassOf" ];
+	"core:Measurement" -> ":Measurement" [ label = "rdfs:subClassOf" ];
 	"core:VirtualNode" -> "https://w3id.org/def/openadr#VTN" [ label = "rdfs:subClassOf" ];
 	"core:VirtualNode" -> "https://w3id.org/def/openadr#VEN" [ label = "rdfs:subClassOf" ];
-	"core:Voltage" -> "saref:Property" [ label = "rdfs:subClassOf" ];
+	"core:Voltage" -> ":Property" [ label = "rdfs:subClassOf" ];
+	":Price" -> ":Property" [ label = "rdfs:subClassOf" ];
 	"core:Sector" -> "http://www.opengis.net/ont/geosparql#Feature" [ label = "rdfs:subClassOf" ];
+	":Device" -> "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" [ label = "rdfs:subClassOf" ];
 	"core:Aggregator" -> "https://w3id.org/def/openadr#VTN" [ label = "rdfs:subClassOf" ];
-	"core:FEID" -> "saref:Device" [ label = "rdfs:subClassOf" ];
+	"core:FEID" -> ":Device" [ label = "rdfs:subClassOf" ];
 	"core:FEID" -> "https://w3id.org/def/openadr#VEN" [ label = "rdfs:subClassOf" ];
-	"core:Asset" -> "saref:Device" [ label = "rdfs:subClassOf" ];
 	"core:Asset" -> "https://w3id.org/def/openadr#Asset" [ label = "rdfs:subClassOf" ];
+	"core:Asset" -> ":Device" [ label = "rdfs:subClassOf" ];
+	"core:Frequency" -> ":Property" [ label = "rdfs:subClassOf" ];
 	"core:Prosumer" -> "core:Customer" [ label = "rdfs:subClassOf" ];
-	"core:Frequency" -> "saref:Property" [ label = "rdfs:subClassOf" ];
 	"time:Instant" -> "time:TemporalEntity" [ label = "rdfs:subClassOf" ];
-	"core:Profile" -> "saref:Profile" [ label = "rdfs:subClassOf" ];
-	"saref:Power" -> "saref:Property" [ label = "rdfs:subClassOf" ];
-	"saref:Energy" -> "saref:Property" [ label = "rdfs:subClassOf" ];
+	"core:Profile" -> ":Profile" [ label = "rdfs:subClassOf" ];
 	"core:Consumer" -> "core:Prosumer" [ label = "rdfs:subClassOf" ];
-	"core:Reward" -> "saref:Property" [ label = "rdfs:subClassOf" ];
-	"saref:Device" -> "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" [ label = "rdfs:subClassOf" ];
+	"core:Reward" -> ":Property" [ label = "rdfs:subClassOf" ];
+	":Power" -> ":Property" [ label = "rdfs:subClassOf" ];
 
 }
