@@ -1,13 +1,19 @@
 {
   "@context" : {
-    "isRelatedToRequirement" : {
-      "@id" : "http://w3id.org/def/vtc#isRelatedToRequirement"
-    },
     "desiredBehaviour" : {
       "@id" : "http://w3id.org/def/vtc#desiredBehaviour"
     },
+    "isRelatedToRequirement" : {
+      "@id" : "http://w3id.org/def/vtc#isRelatedToRequirement"
+    },
+    "source" : {
+      "@id" : "http://purl.org/dc/terms/source"
+    },
     "TestCaseDesign" : {
       "@id" : "http://w3id.org/def/vtc#TestCaseDesign"
+    },
+    "TestSuite" : {
+      "@id" : "http://w3id.org/def/vtc#TestSuite"
     }
   }
 }

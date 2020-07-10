@@ -457,7 +457,7 @@
     "@id" : "https://w3id.org/def/openadr"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.1.10"
+    "@value" : "0.2.0"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#Action",
