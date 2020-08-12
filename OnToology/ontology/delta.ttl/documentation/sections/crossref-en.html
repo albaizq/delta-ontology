@@ -46,6 +46,9 @@ This section provides details for each class and property defined by DELTA ontol
          <a href="#https://saref.etsi.org/core/FeatureOfInterest" title="https://saref.etsi.org/core/FeatureOfInterest">Feature Of Interest</a>
       </li>
       <li>
+         <a href="#Feeder" title="http://delta.linkeddata.es/def/core#Feeder">Feeder</a>
+      </li>
+      <li>
          <a href="#FEID" title="http://delta.linkeddata.es/def/core#FEID">FEID</a>
       </li>
       <li>
@@ -74,12 +77,20 @@ This section provides details for each class and property defined by DELTA ontol
             title="https://saref.etsi.org/saref4city/KeyPerfomanceIndicatorAssessement">Key performance indicator assessment</a>
       </li>
       <li>
+         <a href="#LineLoadingViolation"
+            title="http://delta.linkeddata.es/def/core#LineLoadingViolation">Line loading violation</a>
+      </li>
+      <li>
          <a href="#Measurement" title="http://delta.linkeddata.es/def/core#Measurement">
             <span>measurement</span>
          </a>
       </li>
       <li>
          <a href="#https://saref.etsi.org/core/Measurement" title="https://saref.etsi.org/core/Measurement">Measurement</a>
+      </li>
+      <li>
+         <a href="#OvervoltageViolation"
+            title="http://delta.linkeddata.es/def/core#OvervoltageViolation">Overvoltage violation</a>
       </li>
       <li>
          <a href="#Payment" title="http://delta.linkeddata.es/def/core#Payment">Payment</a>
@@ -135,6 +146,10 @@ This section provides details for each class and property defined by DELTA ontol
          <a href="#Violation" title="http://delta.linkeddata.es/def/core#Violation">Violation</a>
       </li>
       <li>
+         <a href="#ViolationCondition"
+            title="http://delta.linkeddata.es/def/core#ViolationCondition">Violation condition</a>
+      </li>
+      <li>
          <a href="#VirtualNode" title="http://delta.linkeddata.es/def/core#VirtualNode">Virtual node</a>
       </li>
       <li>
@@ -154,7 +169,9 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted" title="https://w3id.org/def/openadr#VTN">v t n</span>
+            <a href="https://w3id.org/def/openadr#VTN"
+               target="_blank"
+               title="https://w3id.org/def/openadr#VTN">v t n</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -170,6 +187,11 @@ This section provides details for each class and property defined by DELTA ontol
          <dt>has super-classes</dt>
          <dd>
             <a href="#https://saref.etsi.org/saref4ener/Device" title="https://saref.etsi.org/saref4ener/Device">Device</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Feeder" title="http://delta.linkeddata.es/def/core#Feeder">Feeder</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -276,8 +298,9 @@ This section provides details for each class and property defined by DELTA ontol
          </dd>
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted"
-                  title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">spatial thing</span>
+            <a href="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+               target="_blank"
+               title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">spatial thing</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -391,6 +414,24 @@ This section provides details for each class and property defined by DELTA ontol
          <dd>http://delta.linkeddata.es/def/core</dd>
       </dl>
    </div>
+   <div class="entity" id="Feeder">
+      <h3>Feeder<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Feeder</p>
+      <div class="comment">
+         <span class="markdown">A feeder is physical asset which belongs to the system operator and used for transferring electricity from sub-stations to areas.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Asset" title="http://delta.linkeddata.es/def/core#Asset">Asset</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="FEID">
       <h3>FEID<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -405,7 +446,9 @@ This section provides details for each class and property defined by DELTA ontol
          <dt>has super-classes</dt>
          <dd>
             <a href="#https://saref.etsi.org/saref4ener/Device" title="https://saref.etsi.org/saref4ener/Device">Device</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted" title="https://w3id.org/def/openadr#VEN">v e n</span>
+            <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/def/openadr#VEN"
+               target="_blank"
+               title="https://w3id.org/def/openadr#VEN">v e n</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -523,6 +566,24 @@ This section provides details for each class and property defined by DELTA ontol
          </dd>
       </dl>
    </div>
+   <div class="entity" id="LineLoadingViolation">
+      <h3>Line loading violation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#LineLoadingViolation</p>
+      <div class="comment">
+         <span class="markdown">Violation of the grid related to line loading.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Violation" title="http://delta.linkeddata.es/def/core#Violation">Violation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="Measurement">
       <h3>measurement<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -555,6 +616,24 @@ This section provides details for each class and property defined by DELTA ontol
          <dt>has sub-classes</dt>
          <dd>
             <a href="#Measurement" title="http://delta.linkeddata.es/def/core#Measurement">measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OvervoltageViolation">
+      <h3>Overvoltage violation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#OvervoltageViolation</p>
+      <div class="comment">
+         <span class="markdown">Violation of the grid related to overvoltage.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Violation" title="http://delta.linkeddata.es/def/core#Violation">Violation</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -846,9 +925,7 @@ This section provides details for each class and property defined by DELTA ontol
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasDurationDescription"
-               title="http://delta.linkeddata.es/def/core#hasDurationCode">has duration description</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#isValidDuringPeriod"
+            <a href="#isValidDuringPeriod"
                title="http://delta.linkeddata.es/def/core#isValidDuringPeriod">is valid during period</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
@@ -908,6 +985,29 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#LineLoadingViolation"
+               title="http://delta.linkeddata.es/def/core#LineLoadingViolation">Line loading violation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#OvervoltageViolation"
+               title="http://delta.linkeddata.es/def/core#OvervoltageViolation">Overvoltage violation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ViolationCondition">
+      <h3>Violation condition<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#ViolationCondition</p>
+      <div class="comment">
+         <span class="markdown">Condition associated to a violation. It indicates that the estimated measurement of a property does not coincide with the required one.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
       </dl>
    </div>
    <div class="entity" id="VirtualNode">
@@ -923,8 +1023,12 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted" title="https://w3id.org/def/openadr#VEN">v e n</span>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted" title="https://w3id.org/def/openadr#VTN">v t n</span>
+            <a href="https://w3id.org/def/openadr#VEN"
+               target="_blank"
+               title="https://w3id.org/def/openadr#VEN">v e n</a>
+            <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/def/openadr#VTN"
+               target="_blank"
+               title="https://w3id.org/def/openadr#VTN">v t n</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -960,6 +1064,10 @@ This section provides details for each class and property defined by DELTA ontol
          <a href="#https://w3id.org/def/openadr#belongsTo" title="https://w3id.org/def/openadr#belongsTo">belongs to</a>
       </li>
       <li>
+         <a href="#belongsToCluster"
+            title="http://delta.linkeddata.es/def/core#belongsToCluster">belongs to cluster</a>
+      </li>
+      <li>
          <a href="#https://saref.etsi.org/core/consistsOf" title="https://saref.etsi.org/core/consistsOf">consists of</a>
       </li>
       <li>
@@ -988,7 +1096,11 @@ This section provides details for each class and property defined by DELTA ontol
       </li>
       <li>
          <a href="#hasDurationDescription"
-            title="http://delta.linkeddata.es/def/core#hasDurationCode">has duration description</a>
+            title="http://delta.linkeddata.es/def/core#hasDurationDescription">has duration description</a>
+      </li>
+      <li>
+         <a href="#hasEstimatedMeasurement"
+            title="http://delta.linkeddata.es/def/core#hasEstimatedMeasurement">has estimated measurement</a>
       </li>
       <li>
          <a href="#hasIncentive" title="http://delta.linkeddata.es/def/core#hasIncentive">has incentive</a>
@@ -1025,6 +1137,10 @@ This section provides details for each class and property defined by DELTA ontol
             title="http://delta.linkeddata.es/def/core#hasTransaction">has transaction</a>
       </li>
       <li>
+         <a href="#hasViolationCondition"
+            title="http://delta.linkeddata.es/def/core#hasViolationCondition">has violation condition</a>
+      </li>
+      <li>
          <a href="#http://www.opengis.net/ont/geosparql#hasGeometry" title="http://www.opengis.net/ont/geosparql#hasGeometry">hasGeometry</a>
       </li>
       <li>
@@ -1048,6 +1164,9 @@ This section provides details for each class and property defined by DELTA ontol
          <a href="#isOwnedBy" title="http://delta.linkeddata.es/def/core#isOwnedBy">is owned by</a>
       </li>
       <li>
+         <a href="#isProfileOf" title="http://delta.linkeddata.es/def/core#isProfileOf">is profile of</a>
+      </li>
+      <li>
          <a href="#isRequestedTo"
             title="http://delta.linkeddata.es/def/core#isRequestedTo">is requested to</a>
       </li>
@@ -1060,6 +1179,9 @@ This section provides details for each class and property defined by DELTA ontol
       </li>
       <li>
          <a href="#https://saref.etsi.org/core/isMeasurementOf" title="https://saref.etsi.org/core/isMeasurementOf">isMeasurementOf</a>
+      </li>
+      <li>
+         <a href="#isRelatedTo" title="http://delta.linkeddata.es/def/core#isRelatedTo">isRelatedTo</a>
       </li>
       <li>
          <a href="#https://saref.etsi.org/core/makesMeasurement" title="https://saref.etsi.org/core/makesMeasurement">makes measurement</a>
@@ -1081,6 +1203,10 @@ This section provides details for each class and property defined by DELTA ontol
       </li>
       <li>
          <a href="#https://saref.etsi.org/core/relatesToProperty" title="https://saref.etsi.org/core/relatesToProperty">relates to property</a>
+      </li>
+      <li>
+         <a href="#hasRequiredMeasurement"
+            title="http://delta.linkeddata.es/def/core#hasRequiredMeasurement">Relationship between a violation condition and the associated measurement that is required.</a>
       </li>
       <li>
          <a href="#requests" title="http://delta.linkeddata.es/def/core#requests">requests</a>
@@ -1138,6 +1264,17 @@ This section provides details for each class and property defined by DELTA ontol
          <span class="markdown">Relationship between a VE, Resource or Asset with the Group of targets associated</span>
       </div>
    </div>
+   <div class="entity" id="belongsToCluster">
+      <h3>belongs to cluster<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#belongsToCluster</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a virtual node and the cluster it belongs to.</span>
+      </div>
+   </div>
    <div class="entity" id="https://saref.etsi.org/core/consistsOf">
       <h3>consists of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1174,7 +1311,7 @@ This section provides details for each class and property defined by DELTA ontol
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#detects</p>
       <div class="comment">
-         <span class="markdown">Relationship between the FEID and the violation it detects</span>
+         <span class="markdown">Relationship between the FEID and the violation it detects.</span>
       </div>
    </div>
    <div class="entity" id="hasAggregatedProperty">
@@ -1185,7 +1322,7 @@ This section provides details for each class and property defined by DELTA ontol
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasAggregatedProperty</p>
       <div class="comment">
-         <span class="markdown">Relationship identifying the properties associated to a group of entities, such as clusters</span>
+         <span class="markdown">Relationship identifying the properties associated to a group of entities, such as clusters.</span>
       </div>
    </div>
    <div class="entity" id="hasComfortSetting">
@@ -1196,7 +1333,7 @@ This section provides details for each class and property defined by DELTA ontol
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasComfortSetting</p>
       <div class="comment">
-         <span class="markdown">Relation to define the comfort settings of a system</span>
+         <span class="markdown">Relation to define the comfort settings of a system.</span>
       </div>
    </div>
    <div class="entity" id="hasCurrency">
@@ -1218,7 +1355,7 @@ This section provides details for each class and property defined by DELTA ontol
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasDeliveryTime</p>
       <div class="comment">
-         <span class="markdown">Link to the delivery time</span>
+         <span class="markdown">Link to the delivery time.</span>
       </div>
    </div>
    <div class="entity" id="https://w3id.org/def/openadr#hasDuration">
@@ -1240,16 +1377,29 @@ This section provides details for each class and property defined by DELTA ontol
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasDurationDescription</p>
       <div class="comment">
-         <span class="markdown">Duration description of a violation, indicanting value and unit</span>
+         <span class="markdown">Duration description of a violation, indicanting value and unit.</span>
       </div>
       <div class="description">
          <dl>
             <dt>has range</dt>
             <dd>
-               <a href="#http://www.w3.org/2006/time#Duration" title="http://www.w3.org/2006/time#Duration">Duration</a>
+               <a href="http://www.w3.org/2006/time#Duration"
+                  target="_blank"
+                  title="http://www.w3.org/2006/time#Duration">duration</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasEstimatedMeasurement">
+      <h3>has estimated measurement<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasEstimatedMeasurement</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a violation condition and the current associated measurement that is estimated.</span>
       </div>
    </div>
    <div class="entity" id="hasIncentive">
@@ -1260,7 +1410,7 @@ This section provides details for each class and property defined by DELTA ontol
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasIncentive</p>
       <div class="comment">
-         <span class="markdown">A relation between a property and its incentives associated</span>
+         <span class="markdown">A relation between a property and its incentives associated.</span>
       </div>
    </div>
    <div class="entity" id="hasIndex">
@@ -1271,7 +1421,7 @@ This section provides details for each class and property defined by DELTA ontol
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasIndex</p>
       <div class="comment">
-         <span class="markdown">Link between a Virtual Node and its index</span>
+         <span class="markdown">Link between a Virtual Node and its index.</span>
       </div>
    </div>
    <div class="entity" id="hasPayment">
@@ -1305,6 +1455,15 @@ This section provides details for each class and property defined by DELTA ontol
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasProfile</p>
       <div class="comment">
          <span class="markdown">Link between an entity and its profile</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isProfileOf" title="http://delta.linkeddata.es/def/core#isProfileOf">is profile of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
       </div>
    </div>
    <div class="entity" id="hasRedundancy">
@@ -1379,6 +1538,17 @@ This section provides details for each class and property defined by DELTA ontol
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasTransaction</p>
       <div class="comment">
          <span class="markdown">Link between a smart contracts and the transactions it stores</span>
+      </div>
+   </div>
+   <div class="entity" id="hasViolationCondition">
+      <h3>has violation condition<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasViolationCondition</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a violation and all its conditions</span>
       </div>
    </div>
    <div class="entity" id="http://www.opengis.net/ont/geosparql#hasGeometry">
@@ -1503,6 +1673,26 @@ This section provides details for each class and property defined by DELTA ontol
          </dl>
       </div>
    </div>
+   <div class="entity" id="isProfileOf">
+      <h3>is profile of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#isProfileOf</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a profile and a device.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasProfile" title="http://delta.linkeddata.es/def/core#hasProfile">has profile</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="isRequestedTo">
       <h3>is requested to<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1563,6 +1753,17 @@ This section provides details for each class and property defined by DELTA ontol
          <dt>Is defined by</dt>
          <dd>http://delta.linkeddata.es/def/core</dd>
       </dl>
+   </div>
+   <div class="entity" id="isRelatedTo">
+      <h3>isRelatedTo<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#isRelatedTo</p>
+      <div class="comment">
+         <span class="markdown">Relationship  between a violation and the related DVNs, FEIDs or Feeders.</span>
+      </div>
    </div>
    <div class="entity" id="https://saref.etsi.org/core/makesMeasurement">
       <h3>makes measurement<sup class="type-op" title="object property">op</sup>
@@ -1672,6 +1873,14 @@ This section provides details for each class and property defined by DELTA ontol
          <dd>http://delta.linkeddata.es/def/core</dd>
       </dl>
    </div>
+   <div class="entity" id="hasRequiredMeasurement">
+      <h3>Relationship between a violation condition and the associated measurement that is required.<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasRequiredMeasurement</p>
+   </div>
    <div class="entity" id="requests">
       <h3>requests<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1680,7 +1889,7 @@ This section provides details for each class and property defined by DELTA ontol
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#requests</p>
       <div class="comment">
-         <span class="markdown">Relationship between a grid violation and the DR request to solve it.</span>
+         <span class="markdown">Relationship between a grid violation and the requested property to solve it.</span>
       </div>
    </div>
    <div class="entity" id="requiresMeasurement">
@@ -1788,7 +1997,9 @@ This section provides details for each class and property defined by DELTA ontol
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
          </dl>
       </div>
@@ -1859,7 +2070,9 @@ This section provides details for each class and property defined by DELTA ontol
          <dl>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -1878,7 +2091,9 @@ This section provides details for each class and property defined by DELTA ontol
          <dl>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
+               <a href="http://www.w3.org/2001/XMLSchema#float"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#float">float</a>
             </dd>
          </dl>
       </div>
@@ -1897,7 +2112,9 @@ This section provides details for each class and property defined by DELTA ontol
          <dl>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
             </dd>
          </dl>
       </div>
@@ -1916,7 +2133,9 @@ This section provides details for each class and property defined by DELTA ontol
          <dl>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
+               <a href="http://www.w3.org/2001/XMLSchema#float"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#float">float</a>
             </dd>
          </dl>
       </div>
@@ -1939,7 +2158,9 @@ This section provides details for each class and property defined by DELTA ontol
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
          </dl>
       </div>
@@ -1992,7 +2213,9 @@ This section provides details for each class and property defined by DELTA ontol
          <dl>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+               <a href="http://www.w3.org/2001/XMLSchema#boolean"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
             </dd>
          </dl>
       </div>
@@ -2005,13 +2228,15 @@ This section provides details for each class and property defined by DELTA ontol
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#occurs</p>
       <div class="comment">
-         <span class="markdown">Date when a DR request is sent</span>
+         <span class="markdown">Date when a violation occurs</span>
       </div>
       <div class="description">
          <dl>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTimeStamp">date time stamp</span>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTimeStamp">date time stamp</a>
             </dd>
          </dl>
       </div>
@@ -2064,7 +2289,9 @@ This section provides details for each class and property defined by DELTA ontol
          <dl>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
+               <a href="http://www.w3.org/2001/XMLSchema#float"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#float">float</a>
             </dd>
          </dl>
       </div>

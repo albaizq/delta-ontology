@@ -1,8 +1,10 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "saref:Measurement" "saref:Price" "https://w3id.org/def/openadr#VEN" ":Power" "time:Instant" "delta:Frequency" "delta:Customer" "delta:VirtualNode" "delta:Sector" "https://w3id.org/def/openadr#VTN" "delta:Consumer" "delta:Aggregator" "delta:Measurement" "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" "delta:Prosumer" "delta:Reward" ":Energy" "time:TemporalEntity" "saref:Profile" "delta:Asset" "http://www.opengis.net/ont/geosparql#Feature" "delta:Voltage" "delta:Profile" "delta:FEID" "saref:Property" "delta:Payment" ":Device" ; /*classes style*/
+node [shape = rectangle, color="black"]; "saref:Measurement" "saref:Price" "https://w3id.org/def/openadr#VEN" ":Power" "time:Instant" "delta:Frequency" "delta:Customer" "delta:VirtualNode" "delta:Sector" "delta:OvervoltageViolation" "https://w3id.org/def/openadr#VTN" "delta:LineLoadingViolation" "delta:Violation" "delta:Consumer" "delta:Aggregator" "delta:Measurement" "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" "delta:Prosumer" "delta:Feeder" "delta:Reward" ":Energy" "time:TemporalEntity" "saref:Profile" "delta:Asset" "http://www.opengis.net/ont/geosparql#Feature" "delta:Voltage" "delta:Profile" "saref:Property" "delta:FEID" "delta:Payment" ":Device" ; /*classes style*/
 	"delta:Payment" -> "saref:Price" [ label = "rdfs:subClassOf" ];
+	"delta:LineLoadingViolation" -> "delta:Violation" [ label = "rdfs:subClassOf" ];
+	"delta:Feeder" -> "delta:Asset" [ label = "rdfs:subClassOf" ];
 	"delta:Measurement" -> "saref:Measurement" [ label = "rdfs:subClassOf" ];
 	"delta:VirtualNode" -> "https://w3id.org/def/openadr#VTN" [ label = "rdfs:subClassOf" ];
 	"delta:VirtualNode" -> "https://w3id.org/def/openadr#VEN" [ label = "rdfs:subClassOf" ];
@@ -12,6 +14,7 @@ node [shape = rectangle, color="black"]; "saref:Measurement" "saref:Price" "http
 	"delta:Sector" -> "http://www.opengis.net/ont/geosparql#Feature" [ label = "rdfs:subClassOf" ];
 	"delta:Aggregator" -> "https://w3id.org/def/openadr#VTN" [ label = "rdfs:subClassOf" ];
 	":Energy" -> "saref:Property" [ label = "rdfs:subClassOf" ];
+	"delta:OvervoltageViolation" -> "delta:Violation" [ label = "rdfs:subClassOf" ];
 	"delta:FEID" -> ":Device" [ label = "rdfs:subClassOf" ];
 	"delta:FEID" -> "https://w3id.org/def/openadr#VEN" [ label = "rdfs:subClassOf" ];
 	":Power" -> "saref:Property" [ label = "rdfs:subClassOf" ];

@@ -269,10 +269,37 @@
     "@id" : "http://delta.linkeddata.es/def/core#requests"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://delta.linkeddata.es/def/core#Action"
+    "@id" : "https://saref.etsi.org/core/Property"
   } ]
 }, {
   "@id" : "_:genid39",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#ViolationCondition"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasViolationCondition"
+  } ]
+}, {
+  "@id" : "_:genid40",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasEstimatedMeasurement"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Measurement"
+  } ]
+}, {
+  "@id" : "_:genid41",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasRequiredMeasurement"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Measurement"
+  } ]
+}, {
+  "@id" : "_:genid42",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#hasIndex"
@@ -281,7 +308,7 @@
     "@id" : "http://delta.linkeddata.es/def/core#Index"
   } ]
 }, {
-  "@id" : "_:genid40",
+  "@id" : "_:genid43",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#hasSmartContract"
@@ -290,7 +317,7 @@
     "@id" : "http://delta.linkeddata.es/def/core#SmartContract"
   } ]
 }, {
-  "@id" : "_:genid41",
+  "@id" : "_:genid44",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#isAllocatedIn"
@@ -299,7 +326,7 @@
     "@id" : "http://delta.linkeddata.es/def/core#Aggregator"
   } ]
 }, {
-  "@id" : "_:genid42",
+  "@id" : "_:genid45",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#Profile"
@@ -308,7 +335,7 @@
     "@id" : "http://delta.linkeddata.es/def/core#hasProfile"
   } ]
 }, {
-  "@id" : "_:genid43",
+  "@id" : "_:genid46",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#hasHref"
@@ -317,7 +344,7 @@
     "@id" : "http://www.w3.org/2002/07/owl#rational"
   } ]
 }, {
-  "@id" : "_:genid44",
+  "@id" : "_:genid47",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#hasReliability"
@@ -326,7 +353,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "_:genid45",
+  "@id" : "_:genid48",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://saref.etsi.org/core/UnitOfMeasure"
@@ -335,40 +362,13 @@
     "@id" : "https://saref.etsi.org/core/isMeasuredIn"
   } ]
 }, {
-  "@id" : "_:genid46",
+  "@id" : "_:genid49",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://saref.etsi.org/core/FeatureOfInterest"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://saref.etsi.org/core/isMeasurementOf"
-  } ]
-}, {
-  "@id" : "_:genid47",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://saref.etsi.org/core/hasTimestamp"
-  } ]
-}, {
-  "@id" : "_:genid48",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://saref.etsi.org/core/hasValue"
-  } ]
-}, {
-  "@id" : "_:genid49",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://saref.etsi.org/core/Property"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://saref.etsi.org/core/isAbout"
   } ]
 }, {
   "@id" : "_:genid5",
@@ -384,19 +384,19 @@
   "@id" : "_:genid50",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://saref.etsi.org/core/Measurement"
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://saref.etsi.org/core/relatesToMeasurement"
+    "@id" : "https://saref.etsi.org/core/hasTimestamp"
   } ]
 }, {
   "@id" : "_:genid51",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://saref.etsi.org/core/Measurement"
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://saref.etsi.org/saref4city/isDerivedFrom"
+    "@id" : "https://saref.etsi.org/core/hasValue"
   } ]
 }, {
   "@id" : "_:genid52",
@@ -405,10 +405,37 @@
     "@id" : "https://saref.etsi.org/core/Property"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://saref.etsi.org/core/measuresProperty"
+    "@id" : "https://saref.etsi.org/core/isAbout"
   } ]
 }, {
   "@id" : "_:genid53",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/Measurement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://saref.etsi.org/core/relatesToMeasurement"
+  } ]
+}, {
+  "@id" : "_:genid54",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/Measurement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://saref.etsi.org/saref4city/isDerivedFrom"
+  } ]
+}, {
+  "@id" : "_:genid55",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/Property"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://saref.etsi.org/core/measuresProperty"
+  } ]
+}, {
+  "@id" : "_:genid56",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#Incentive"
@@ -457,7 +484,7 @@
     "@id" : "https://w3id.org/def/openadr"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.1.10"
+    "@value" : "0.2.1"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#Action",
@@ -648,6 +675,18 @@
     "@id" : "_:genid27"
   } ]
 }, {
+  "@id" : "http://delta.linkeddata.es/def/core#Feeder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A feeder is physical asset which belongs to the system operator and used for transferring electricity from sub-stations to areas."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Feeder"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Asset"
+  } ]
+}, {
   "@id" : "http://delta.linkeddata.es/def/core#Frequency",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -684,6 +723,18 @@
     "@value" : "Index"
   } ]
 }, {
+  "@id" : "http://delta.linkeddata.es/def/core#LineLoadingViolation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Violation of the grid related to line loading."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Line loading violation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Violation"
+  } ]
+}, {
   "@id" : "http://delta.linkeddata.es/def/core#MarketSettlement",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
@@ -693,6 +744,18 @@
     "@id" : "https://saref.etsi.org/core/Measurement"
   }, {
     "@id" : "_:genid28"
+  } ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#OvervoltageViolation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Violation of the grid related to overvoltage."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Overvoltage violation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Violation"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#Payment",
@@ -870,6 +933,22 @@
     "@id" : "_:genid37"
   }, {
     "@id" : "_:genid38"
+  }, {
+    "@id" : "_:genid39"
+  } ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#ViolationCondition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Condition associated to a violation. It indicates that the estimated measurement of a property does not coincide with the required one."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Violation condition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid40"
+  }, {
+    "@id" : "_:genid41"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#VirtualNode",
@@ -885,17 +964,17 @@
   }, {
     "@id" : "https://w3id.org/def/openadr#VTN"
   }, {
-    "@id" : "_:genid39"
-  }, {
-    "@id" : "_:genid40"
-  }, {
-    "@id" : "_:genid41"
-  }, {
     "@id" : "_:genid42"
   }, {
     "@id" : "_:genid43"
   }, {
     "@id" : "_:genid44"
+  }, {
+    "@id" : "_:genid45"
+  }, {
+    "@id" : "_:genid46"
+  }, {
+    "@id" : "_:genid47"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#Voltage",
@@ -913,7 +992,7 @@
   "@id" : "http://delta.linkeddata.es/def/core#agreesOn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@value" : "Relationship between a smart contract and the property it agrees on"
+    "@value" : "Relationship between a smart contract and the property it agrees on."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "agrees on"
@@ -922,13 +1001,22 @@
   "@id" : "http://delta.linkeddata.es/def/core#allocates",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@value" : "Relation between a virtual node and its associated aggregator"
+    "@value" : "Relation between a virtual node and its associated aggregator."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "allocates"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#isAllocatedIn"
+  } ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#belongsToCluster",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between a virtual node and the cluster it belongs to."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "belongs to cluster"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#clusterDescription",
@@ -964,7 +1052,7 @@
   "@id" : "http://delta.linkeddata.es/def/core#detects",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship between the FEID and the violation it detects"
+    "@value" : "Relationship between the FEID and the violation it detects."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "detects"
@@ -973,7 +1061,7 @@
   "@id" : "http://delta.linkeddata.es/def/core#hasAggregatedProperty",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship identifying the properties associated to a group of entities, such as clusters"
+    "@value" : "Relationship identifying the properties associated to a group of entities, such as clusters."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has aggregated property"
@@ -982,7 +1070,7 @@
   "@id" : "http://delta.linkeddata.es/def/core#hasComfortSetting",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relation to define the comfort settings of a system"
+    "@value" : "Relation to define the comfort settings of a system."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has comfort settings"
@@ -1009,7 +1097,7 @@
   "@id" : "http://delta.linkeddata.es/def/core#hasDeliveryTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Link to the delivery time"
+    "@value" : "Link to the delivery time."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has delivery time"
@@ -1024,13 +1112,22 @@
   "@id" : "http://delta.linkeddata.es/def/core#hasDurationDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Duration description of a violation, indicanting value and unit"
+    "@value" : "Duration description of a violation, indicanting value and unit."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has duration code"
+    "@value" : "has duration description"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2006/time#TemporalEntity"
+    "@id" : "http://www.w3.org/2006/time#Duration"
+  } ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#hasEstimatedMeasurement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between a violation condition and the current associated measurement that is estimated."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has estimated measurement"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#hasGranularity",
@@ -1054,7 +1151,7 @@
   "@id" : "http://delta.linkeddata.es/def/core#hasIncentive",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A relation between a property and its incentives associated"
+    "@value" : "A relation between a property and its incentives associated."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has incentive"
@@ -1063,7 +1160,7 @@
   "@id" : "http://delta.linkeddata.es/def/core#hasIndex",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Link between a Virtual Node and its index"
+    "@value" : "Link between a Virtual Node and its index."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has index"
@@ -1130,6 +1227,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has profile"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#isProfileOf"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#hasRedundancy",
@@ -1151,6 +1251,14 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#hasRequiredMeasurement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Relationship between a violation condition and the associated measurement that is required."
+  }, {
+    "@value" : "has required measurement"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#hasReward",
@@ -1193,6 +1301,15 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has transaction"
+  } ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#hasViolationCondition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between a violation and all its conditions"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has violation condition"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#hasViolationType",
@@ -1281,6 +1398,24 @@
     "@id" : "http://delta.linkeddata.es/def/core#owns"
   } ]
 }, {
+  "@id" : "http://delta.linkeddata.es/def/core#isProfileOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between a profile and a device."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is profile of"
+  } ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#isRelatedTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship  between a violation and the related DVNs, FEIDs or Feeders."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "isRelatedTo"
+  } ]
+}, {
   "@id" : "http://delta.linkeddata.es/def/core#isRequestedTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1314,7 +1449,7 @@
   "@id" : "http://delta.linkeddata.es/def/core#occurs",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Date when a DR request is sent"
+    "@value" : "Date when a violation occurs"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "occurs"
@@ -1335,7 +1470,7 @@
   "@id" : "http://delta.linkeddata.es/def/core#requests",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship between a grid violation and the DR request to solve it."
+    "@value" : "Relationship between a grid violation and the requested property to solve it."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "requests"
@@ -1480,13 +1615,13 @@
     "@value" : "Measurement"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid45"
-  }, {
-    "@id" : "_:genid46"
-  }, {
-    "@id" : "_:genid47"
-  }, {
     "@id" : "_:genid48"
+  }, {
+    "@id" : "_:genid49"
+  }, {
+    "@id" : "_:genid50"
+  }, {
+    "@id" : "_:genid51"
   } ]
 }, {
   "@id" : "https://saref.etsi.org/core/Price",
@@ -1516,7 +1651,7 @@
     "@value" : "Profile"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid49"
+    "@id" : "_:genid52"
   } ]
 }, {
   "@id" : "https://saref.etsi.org/core/Property",
@@ -1531,7 +1666,7 @@
     "@value" : "Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid50"
+    "@id" : "_:genid53"
   } ]
 }, {
   "@id" : "https://saref.etsi.org/core/UnitOfMeasure",
@@ -1684,7 +1819,7 @@
     "@value" : "Key Performance Indicator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid51"
+    "@id" : "_:genid54"
   } ]
 }, {
   "@id" : "https://saref.etsi.org/saref4city/isDerivedFrom",
@@ -1726,7 +1861,7 @@
     "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid52"
+    "@id" : "_:genid55"
   } ]
 }, {
   "@id" : "https://saref.etsi.org/saref4ener/Energy",
@@ -1740,7 +1875,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://saref.etsi.org/core/Property"
   }, {
-    "@id" : "_:genid53"
+    "@id" : "_:genid56"
   } ]
 }, {
   "@id" : "https://saref.etsi.org/saref4ener/Power",

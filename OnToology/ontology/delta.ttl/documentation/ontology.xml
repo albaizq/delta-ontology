@@ -17,7 +17,7 @@
         <terms:creator rdf:resource="https://www.linkedin.com/in/andrea-cimmino-arriaga-64b6b9112/"/>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
         <rdfs:comment>This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible.</rdfs:comment>
-        <owl:versionInfo>0.1.10</owl:versionInfo>
+        <owl:versionInfo>0.2.1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -64,7 +64,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#agreesOn">
-        <rdfs:isDefinedBy>Relationship between a smart contract and the property it agrees on</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>Relationship between a smart contract and the property it agrees on.</rdfs:isDefinedBy>
         <rdfs:label>agrees on</rdfs:label>
     </owl:ObjectProperty>
     
@@ -75,8 +75,18 @@
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#allocates">
         <owl:inverseOf rdf:resource="http://delta.linkeddata.es/def/core#isAllocatedIn"/>
-        <rdfs:isDefinedBy>Relation between a virtual node and its associated aggregator</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>Relation between a virtual node and its associated aggregator.</rdfs:isDefinedBy>
         <rdfs:label>allocates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#belongsToCluster -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#belongsToCluster">
+        <rdfs:comment>Relationship between a virtual node and the cluster it belongs to.</rdfs:comment>
+        <rdfs:label>belongs to cluster</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -95,7 +105,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#detects">
-        <rdfs:comment>Relationship between the FEID and the violation it detects</rdfs:comment>
+        <rdfs:comment>Relationship between the FEID and the violation it detects.</rdfs:comment>
         <rdfs:label>detects</rdfs:label>
     </owl:ObjectProperty>
     
@@ -105,7 +115,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasAggregatedProperty">
-        <rdfs:comment>Relationship identifying the properties associated to a group of entities, such as clusters</rdfs:comment>
+        <rdfs:comment>Relationship identifying the properties associated to a group of entities, such as clusters.</rdfs:comment>
         <rdfs:label>has aggregated property</rdfs:label>
     </owl:ObjectProperty>
     
@@ -115,7 +125,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasComfortSetting">
-        <rdfs:comment>Relation to define the comfort settings of a system</rdfs:comment>
+        <rdfs:comment>Relation to define the comfort settings of a system.</rdfs:comment>
         <rdfs:label>has comfort settings</rdfs:label>
     </owl:ObjectProperty>
     
@@ -135,7 +145,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasDeliveryTime">
-        <rdfs:comment>Link to the delivery time</rdfs:comment>
+        <rdfs:comment>Link to the delivery time.</rdfs:comment>
         <rdfs:label>has delivery time</rdfs:label>
     </owl:ObjectProperty>
     
@@ -145,9 +155,19 @@
 
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasDurationDescription">
-        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
-        <rdfs:comment>Duration description of a violation, indicanting value and unit</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#Duration"/>
+        <rdfs:comment>Duration description of a violation, indicanting value and unit.</rdfs:comment>
         <rdfs:label>has duration description</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#hasEstimatedMeasurement -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasEstimatedMeasurement">
+        <rdfs:comment>Relationship between a violation condition and the current associated measurement that is estimated.</rdfs:comment>
+        <rdfs:label>has estimated measurement</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -156,7 +176,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasIncentive">
-        <rdfs:comment>A relation between a property and its incentives associated</rdfs:comment>
+        <rdfs:comment>A relation between a property and its incentives associated.</rdfs:comment>
         <rdfs:label>has incentive</rdfs:label>
     </owl:ObjectProperty>
     
@@ -166,7 +186,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasIndex">
-        <rdfs:comment>Link between a Virtual Node and its index</rdfs:comment>
+        <rdfs:comment>Link between a Virtual Node and its index.</rdfs:comment>
         <rdfs:label>has index</rdfs:label>
     </owl:ObjectProperty>
     
@@ -196,6 +216,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasProfile">
+        <owl:inverseOf rdf:resource="http://delta.linkeddata.es/def/core#isProfileOf"/>
         <rdfs:comment>Link between an entity and its profile</rdfs:comment>
         <rdfs:label>has profile</rdfs:label>
     </owl:ObjectProperty>
@@ -208,6 +229,16 @@
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasRedundancy">
         <rdfs:comment>Redundancy of  a FEID</rdfs:comment>
         <rdfs:label>has redundancy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#hasRequiredMeasurement -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasRequiredMeasurement">
+        <rdfs:label>Relationship between a violation condition and the associated measurement that is required.</rdfs:label>
+        <rdfs:label>has required measurement</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -254,6 +285,16 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#hasViolationCondition -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasViolationCondition">
+        <rdfs:comment>Relationship between a violation and all its conditions</rdfs:comment>
+        <rdfs:label>has violation condition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#includesProfile -->
 
 
@@ -291,6 +332,26 @@
         <owl:inverseOf rdf:resource="http://delta.linkeddata.es/def/core#owns"/>
         <rdfs:comment>Link between a device and its customer</rdfs:comment>
         <rdfs:label>is owned by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#isProfileOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#isProfileOf">
+        <rdfs:comment>Relationship between a profile and a device.</rdfs:comment>
+        <rdfs:label>is profile of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#isRelatedTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#isRelatedTo">
+        <rdfs:comment>Relationship  between a violation and the related DVNs, FEIDs or Feeders.</rdfs:comment>
+        <rdfs:label>isRelatedTo</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -340,7 +401,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#requests">
-        <rdfs:comment>Relationship between a grid violation and the DR request to solve it.</rdfs:comment>
+        <rdfs:comment>Relationship between a grid violation and the requested property to solve it.</rdfs:comment>
         <rdfs:label>requests</rdfs:label>
     </owl:ObjectProperty>
     
@@ -711,7 +772,7 @@
 
     <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#occurs">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
-        <rdfs:comment>Date when a DR request is sent</rdfs:comment>
+        <rdfs:comment>Date when a violation occurs</rdfs:comment>
         <rdfs:label>occurs</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -995,6 +1056,17 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#Feeder -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Feeder">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Asset"/>
+        <rdfs:comment>A feeder is physical asset which belongs to the system operator and used for transferring electricity from sub-stations to areas.</rdfs:comment>
+        <rdfs:label>Feeder</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#Frequency -->
 
 
@@ -1026,6 +1098,17 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#LineLoadingViolation -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#LineLoadingViolation">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Violation"/>
+        <rdfs:comment>Violation of the grid related to line loading.</rdfs:comment>
+        <rdfs:label>Line loading violation</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#MarketSettlement -->
 
 
@@ -1044,6 +1127,17 @@
                 <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Phase"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#OvervoltageViolation -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#OvervoltageViolation">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Violation"/>
+        <rdfs:comment>Violation of the grid related to overvoltage.</rdfs:comment>
+        <rdfs:label>Overvoltage violation</rdfs:label>
     </owl:Class>
     
 
@@ -1205,11 +1299,39 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#requests"/>
-                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Action"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasViolationCondition"/>
+                <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#ViolationCondition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Violation of the grid</rdfs:comment>
         <rdfs:label>Violation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#ViolationCondition -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#ViolationCondition">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasEstimatedMeasurement"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasRequiredMeasurement"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Condition associated to a violation. It indicates that the estimated measurement of a property does not coincide with the required one.</rdfs:comment>
+        <rdfs:label>Violation condition</rdfs:label>
     </owl:Class>
     
 
@@ -1738,6 +1860,6 @@
 
 
 
-<!-- Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/ -->
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
 
 
