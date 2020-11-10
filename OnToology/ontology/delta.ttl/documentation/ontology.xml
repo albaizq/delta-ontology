@@ -17,7 +17,7 @@
         <terms:creator rdf:resource="https://www.linkedin.com/in/andrea-cimmino-arriaga-64b6b9112/"/>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
         <rdfs:comment>This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible.</rdfs:comment>
-        <owl:versionInfo>0.2.2</owl:versionInfo>
+        <owl:versionInfo>0.2.3</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -311,6 +311,17 @@
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#isAllocatedIn">
         <rdfs:comment>Link from a virtual node to its aggregator</rdfs:comment>
         <rdfs:label>is allocated in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#isDefinedIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#isDefinedIn">
+        <rdfs:range rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
+        <rdfs:comment>A relationship defining the currency associated to a value</rdfs:comment>
+        <rdfs:label>is defined in</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -652,17 +663,6 @@
     
 
 
-    <!-- http://delta.linkeddata.es/def/core#hasPoint -->
-
-
-    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#hasPoint">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-        <rdfs:comment>Points that are used by the DELTA platform to calculate the customers rewards</rdfs:comment>
-        <rdfs:label>has point</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://delta.linkeddata.es/def/core#hasPort -->
 
 
@@ -681,6 +681,16 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment>Reliability associated to a virtual node</rdfs:comment>
         <rdfs:label>has reliability</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#hasRewardValue -->
+
+
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#hasRewardValue">
+        <rdfs:comment>A relationship defining the value of a certain reward, e.g., points or money</rdfs:comment>
+        <rdfs:label>has reward value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -798,6 +808,15 @@
     
 
 
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </rdf:Description>
+    
+
+
     <!-- https://saref.etsi.org/core/hasTimestamp -->
 
 
@@ -814,8 +833,8 @@
 
     <owl:DatatypeProperty rdf:about="https://saref.etsi.org/core/hasValue">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:comment>A relationship defining the value of a certain property, e.g., energy or power. Note that, even if numeric values are expected to enable reasoning, measurement values could use other datatypes.</rdfs:comment>
         <rdfs:isDefinedBy>https://w3id.org/def/saref</rdfs:isDefinedBy>
+        <rdfs:label>A relationship defining the value of a certain property, e.g., energy or power. Note that, even if numeric values are expected to enable reasoning, measurement values could use other datatypes.</rdfs:label>
         <rdfs:label>has value</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -963,12 +982,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasReward"/>
                 <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Reward"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasPoint"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Entity that interacts in the platform</rdfs:comment>
@@ -1132,6 +1145,23 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#MonetaryRemuneration -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#MonetaryRemuneration">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Reward"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#isDefinedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Reward associated to the customer in terms of monetary remuneration</rdfs:comment>
+        <rdfs:label>Monetary remuneration</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#OvervoltageViolation -->
 
 
@@ -1147,7 +1177,6 @@
 
 
     <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Payment">
-        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Price"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#status"/>
@@ -1166,6 +1195,17 @@
     <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Phase">
         <rdfs:comment>Phase of a measurement</rdfs:comment>
         <rdfs:label>Phase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Point -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Point">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Reward"/>
+        <rdfs:comment>Reward associated to the customer in terms of  points</rdfs:comment>
+        <rdfs:label>Point</rdfs:label>
     </owl:Class>
     
 
@@ -1214,7 +1254,12 @@
 
 
     <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Reward">
-        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasRewardValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Reward associated to the customers that is given after using the engagement tools</rdfs:comment>
         <rdfs:comment>Reward associated to the customers that is given after using the engagement tools (e.g., discounts)</rdfs:comment>
         <rdfs:label>Reward</rdfs:label>

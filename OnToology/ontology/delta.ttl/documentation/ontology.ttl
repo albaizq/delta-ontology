@@ -14,7 +14,7 @@
                                                                           <https://www.linkedin.com/in/andrea-cimmino-arriaga-64b6b9112/> ;
                                        <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                        rdfs:comment "This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible." ;
-                                       owl:versionInfo "0.2.2" .
+                                       owl:versionInfo "0.2.3" .
 
 #################################################################
 #    Annotation properties
@@ -185,6 +185,13 @@
 :isAllocatedIn rdf:type owl:ObjectProperty ;
                rdfs:comment "Link from a virtual node to its aggregator" ;
                rdfs:label "is allocated in" .
+
+
+###  http://delta.linkeddata.es/def/core#isDefinedIn
+:isDefinedIn rdf:type owl:ObjectProperty ;
+             rdfs:range <http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure> ;
+             rdfs:comment "A relationship defining the currency associated to a value" ;
+             rdfs:label "is defined in" .
 
 
 ###  http://delta.linkeddata.es/def/core#isLocatedAt
@@ -392,13 +399,6 @@
        rdfs:label "has ip" .
 
 
-###  http://delta.linkeddata.es/def/core#hasPoint
-:hasPoint rdf:type owl:DatatypeProperty ;
-          rdfs:range xsd:float ;
-          rdfs:comment "Points that are used by the DELTA platform to calculate the customers rewards" ;
-          rdfs:label "has point" .
-
-
 ###  http://delta.linkeddata.es/def/core#hasPort
 :hasPort rdf:type owl:DatatypeProperty ;
          rdfs:range xsd:integer ;
@@ -411,6 +411,12 @@
                 rdfs:range xsd:float ;
                 rdfs:comment "Reliability associated to a virtual node" ;
                 rdfs:label "has reliability" .
+
+
+###  http://delta.linkeddata.es/def/core#hasRewardValue
+:hasRewardValue rdf:type owl:DatatypeProperty ;
+                rdfs:comment "A relationship defining the value of a certain reward, e.g., points or money" ;
+                rdfs:label "has reward value" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasViolationType
@@ -479,6 +485,10 @@
         rdfs:label "status" .
 
 
+###  http://www.w3.org/2002/07/owl#topDataProperty
+owl:topDataProperty rdfs:range xsd:float .
+
+
 ###  https://saref.etsi.org/core/hasTimestamp
 <https://saref.etsi.org/core/hasTimestamp> rdf:type owl:DatatypeProperty ;
                                            rdfs:comment "A relationship stating the timestamp of an entity (e.g. a measurement)." ;
@@ -489,9 +499,9 @@
 ###  https://saref.etsi.org/core/hasValue
 <https://saref.etsi.org/core/hasValue> rdf:type owl:DatatypeProperty ;
                                        rdfs:subPropertyOf owl:topDataProperty ;
-                                       rdfs:comment "A relationship defining the value of a certain property, e.g., energy or power. Note that, even if numeric values are expected to enable reasoning, measurement values could use other datatypes." ;
                                        rdfs:isDefinedBy "https://w3id.org/def/saref" ;
-                                       rdfs:label "has value" .
+                                       rdfs:label "A relationship defining the value of a certain property, e.g., energy or power. Note that, even if numeric values are expected to enable reasoning, measurement values could use other datatypes." ,
+                                                  "has value" .
 
 
 #################################################################
@@ -581,10 +591,6 @@
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :hasReward ;
                             owl:allValuesFrom :Reward
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasPoint ;
-                            owl:someValuesFrom xsd:float
                           ] ;
           rdfs:comment "Entity that interacts in the platform" ;
           rdfs:label "Customer" .
@@ -688,6 +694,17 @@
              rdfs:label "Measurement" .
 
 
+###  http://delta.linkeddata.es/def/core#MonetaryRemuneration
+:MonetaryRemuneration rdf:type owl:Class ;
+                      rdfs:subClassOf :Reward ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :isDefinedIn ;
+                                        owl:someValuesFrom <http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure>
+                                      ] ;
+                      rdfs:comment "Reward associated to the customer in terms of monetary remuneration" ;
+                      rdfs:label "Monetary remuneration" .
+
+
 ###  http://delta.linkeddata.es/def/core#OvervoltageViolation
 :OvervoltageViolation rdf:type owl:Class ;
                       rdfs:subClassOf :Violation ;
@@ -697,8 +714,7 @@
 
 ###  http://delta.linkeddata.es/def/core#Payment
 :Payment rdf:type owl:Class ;
-         rdfs:subClassOf <https://saref.etsi.org/core/Price> ,
-                         [ rdf:type owl:Restriction ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
                            owl:onProperty :status ;
                            owl:someValuesFrom rdfs:Literal
                          ] ;
@@ -710,6 +726,13 @@
 :Phase rdf:type owl:Class ;
        rdfs:comment "Phase of a measurement" ;
        rdfs:label "Phase" .
+
+
+###  http://delta.linkeddata.es/def/core#Point
+:Point rdf:type owl:Class ;
+       rdfs:subClassOf :Reward ;
+       rdfs:comment "Reward associated to the customer in terms of  points" ;
+       rdfs:label "Point" .
 
 
 ###  http://delta.linkeddata.es/def/core#Profile
@@ -740,7 +763,10 @@
 
 ###  http://delta.linkeddata.es/def/core#Reward
 :Reward rdf:type owl:Class ;
-        rdfs:subClassOf <https://saref.etsi.org/core/Property> ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasRewardValue ;
+                          owl:someValuesFrom xsd:float
+                        ] ;
         rdfs:comment "Reward associated to the customers that is given after using the engagement tools" ,
                      "Reward associated to the customers that is given after using the engagement tools (e.g., discounts)" ;
         rdfs:label "Reward" .

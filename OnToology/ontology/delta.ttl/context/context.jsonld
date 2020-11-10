@@ -8,6 +8,10 @@
       "@id" : "https://saref.etsi.org/saref4city/isDerivedFrom",
       "@type" : "@id"
     },
+    "isDefinedIn" : {
+      "@id" : "http://delta.linkeddata.es/def/core#isDefinedIn",
+      "@type" : "@id"
+    },
     "UnitOfMeasure" : {
       "@id" : "https://saref.etsi.org/core/UnitOfMeasure"
     },
@@ -76,7 +80,11 @@
       "@id" : "http://delta.linkeddata.es/def/core#Prosumer"
     },
     "topDataProperty" : {
-      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "MonetaryRemuneration" : {
+      "@id" : "http://delta.linkeddata.es/def/core#MonetaryRemuneration"
     },
     "Feeder" : {
       "@id" : "http://delta.linkeddata.es/def/core#Feeder"
@@ -203,10 +211,6 @@
     "Energy" : {
       "@id" : "https://saref.etsi.org/core/Energy"
     },
-    "hasPoint" : {
-      "@id" : "http://delta.linkeddata.es/def/core#hasPoint",
-      "@type" : "http://www.w3.org/2001/XMLSchema#float"
-    },
     "isRequestedTo" : {
       "@id" : "http://delta.linkeddata.es/def/core#isRequestedTo",
       "@type" : "@id"
@@ -267,6 +271,9 @@
     "isDefinedBy" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
     },
+    "Point" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Point"
+    },
     "KeyPerformanceIndicator" : {
       "@id" : "https://saref.etsi.org/saref4city/KeyPerformanceIndicator"
     },
@@ -324,6 +331,9 @@
     },
     "SmartContract" : {
       "@id" : "http://delta.linkeddata.es/def/core#SmartContract"
+    },
+    "hasRewardValue" : {
+      "@id" : "http://delta.linkeddata.es/def/core#hasRewardValue"
     },
     "hasPhase" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasPhase",
@@ -411,6 +421,9 @@
     },
     "hasTimestamp" : {
       "@id" : "https://saref.etsi.org/core/hasTimestamp"
+    },
+    "Unit_of_measure" : {
+      "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"
     },
     "Power" : {
       "@id" : "https://saref.etsi.org/core/Power"
