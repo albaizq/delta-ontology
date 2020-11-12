@@ -95,10 +95,10 @@
   "@id" : "_:genid19",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://delta.linkeddata.es/def/core#hasPoint"
+    "@id" : "http://delta.linkeddata.es/def/core#isDefinedIn"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+    "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"
   } ]
 }, {
   "@id" : "_:genid20",
@@ -185,13 +185,22 @@
   "@id" : "_:genid29",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#isDefinedIn"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"
+  } ]
+}, {
+  "@id" : "_:genid30",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#status"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "_:genid30",
+  "@id" : "_:genid31",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/openadr#hasDuration"
@@ -200,7 +209,7 @@
     "@id" : "http://www.w3.org/2006/time#TemporalEntity"
   } ]
 }, {
-  "@id" : "_:genid31",
+  "@id" : "_:genid32",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#hasCreationDateTime"
@@ -209,7 +218,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
-  "@id" : "_:genid32",
+  "@id" : "_:genid33",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#hasGranularity"
@@ -218,7 +227,16 @@
     "@id" : "http://www.w3.org/2002/07/owl#rational"
   } ]
 }, {
-  "@id" : "_:genid33",
+  "@id" : "_:genid34",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasRewardValue"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "_:genid35",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -227,7 +245,7 @@
     "@id" : "http://delta.linkeddata.es/def/core#sectorName"
   } ]
 }, {
-  "@id" : "_:genid34",
+  "@id" : "_:genid36",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#agreesOn"
@@ -236,7 +254,7 @@
     "@id" : "https://saref.etsi.org/core/Property"
   } ]
 }, {
-  "@id" : "_:genid35",
+  "@id" : "_:genid37",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#isValidDuringPeriod"
@@ -245,7 +263,7 @@
     "@id" : "http://www.w3.org/2006/time#TemporalEntity"
   } ]
 }, {
-  "@id" : "_:genid36",
+  "@id" : "_:genid38",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#Payment"
@@ -254,7 +272,7 @@
     "@id" : "http://delta.linkeddata.es/def/core#hasPayment"
   } ]
 }, {
-  "@id" : "_:genid37",
+  "@id" : "_:genid39",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#hasDurationDescription"
@@ -263,7 +281,7 @@
     "@id" : "http://www.w3.org/2006/time#Duration"
   } ]
 }, {
-  "@id" : "_:genid38",
+  "@id" : "_:genid40",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#requests"
@@ -272,7 +290,7 @@
     "@id" : "https://saref.etsi.org/core/Property"
   } ]
 }, {
-  "@id" : "_:genid39",
+  "@id" : "_:genid41",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#ViolationCondition"
@@ -281,7 +299,7 @@
     "@id" : "http://delta.linkeddata.es/def/core#hasViolationCondition"
   } ]
 }, {
-  "@id" : "_:genid40",
+  "@id" : "_:genid42",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#hasEstimatedMeasurement"
@@ -290,7 +308,7 @@
     "@id" : "http://delta.linkeddata.es/def/core#Measurement"
   } ]
 }, {
-  "@id" : "_:genid41",
+  "@id" : "_:genid43",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#hasRequiredMeasurement"
@@ -299,7 +317,7 @@
     "@id" : "http://delta.linkeddata.es/def/core#Measurement"
   } ]
 }, {
-  "@id" : "_:genid42",
+  "@id" : "_:genid44",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#hasIndex"
@@ -308,7 +326,7 @@
     "@id" : "http://delta.linkeddata.es/def/core#Index"
   } ]
 }, {
-  "@id" : "_:genid43",
+  "@id" : "_:genid45",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#hasSmartContract"
@@ -317,7 +335,7 @@
     "@id" : "http://delta.linkeddata.es/def/core#SmartContract"
   } ]
 }, {
-  "@id" : "_:genid44",
+  "@id" : "_:genid46",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#isAllocatedIn"
@@ -326,7 +344,7 @@
     "@id" : "http://delta.linkeddata.es/def/core#Aggregator"
   } ]
 }, {
-  "@id" : "_:genid45",
+  "@id" : "_:genid47",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#Profile"
@@ -335,7 +353,7 @@
     "@id" : "http://delta.linkeddata.es/def/core#hasProfile"
   } ]
 }, {
-  "@id" : "_:genid46",
+  "@id" : "_:genid48",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#hasHref"
@@ -344,31 +362,13 @@
     "@id" : "http://www.w3.org/2002/07/owl#rational"
   } ]
 }, {
-  "@id" : "_:genid47",
+  "@id" : "_:genid49",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://delta.linkeddata.es/def/core#hasReliability"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ]
-}, {
-  "@id" : "_:genid48",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://saref.etsi.org/core/Property"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://saref.etsi.org/core/measuresProperty"
-  } ]
-}, {
-  "@id" : "_:genid49",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://delta.linkeddata.es/def/core#Incentive"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://delta.linkeddata.es/def/core#hasIncentive"
   } ]
 }, {
   "@id" : "_:genid5",
@@ -384,13 +384,31 @@
   "@id" : "_:genid50",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/Property"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://saref.etsi.org/core/measuresProperty"
+  } ]
+}, {
+  "@id" : "_:genid51",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Incentive"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasIncentive"
+  } ]
+}, {
+  "@id" : "_:genid52",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://saref.etsi.org/core/UnitOfMeasure"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://saref.etsi.org/core/isMeasuredIn"
   } ]
 }, {
-  "@id" : "_:genid51",
+  "@id" : "_:genid53",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://saref.etsi.org/core/FeatureOfInterest"
@@ -399,7 +417,7 @@
     "@id" : "https://saref.etsi.org/core/isMeasurementOf"
   } ]
 }, {
-  "@id" : "_:genid52",
+  "@id" : "_:genid54",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
@@ -408,7 +426,7 @@
     "@id" : "https://saref.etsi.org/core/hasTimestamp"
   } ]
 }, {
-  "@id" : "_:genid53",
+  "@id" : "_:genid55",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
@@ -417,7 +435,7 @@
     "@id" : "https://saref.etsi.org/core/hasValue"
   } ]
 }, {
-  "@id" : "_:genid54",
+  "@id" : "_:genid56",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://saref.etsi.org/core/Property"
@@ -426,7 +444,7 @@
     "@id" : "https://saref.etsi.org/core/isAbout"
   } ]
 }, {
-  "@id" : "_:genid55",
+  "@id" : "_:genid57",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://saref.etsi.org/core/Measurement"
@@ -435,7 +453,7 @@
     "@id" : "https://saref.etsi.org/core/relatesToMeasurement"
   } ]
 }, {
-  "@id" : "_:genid56",
+  "@id" : "_:genid58",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://saref.etsi.org/core/Measurement"
@@ -484,7 +502,7 @@
     "@id" : "https://w3id.org/def/openadr"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.2.2"
+    "@value" : "0.2.3"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#Action",
@@ -590,8 +608,6 @@
     "@id" : "_:genid17"
   }, {
     "@id" : "_:genid18"
-  }, {
-    "@id" : "_:genid19"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#CustomerCluster",
@@ -601,6 +617,20 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Customer cluster"
+  } ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#Discount",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Reward associated to the customer in terms of monetary remuneration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Discount"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Reward"
+  }, {
+    "@id" : "_:genid19"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#EnergyConsumption",
@@ -749,6 +779,20 @@
     "@id" : "_:genid28"
   } ]
 }, {
+  "@id" : "http://delta.linkeddata.es/def/core#MonetaryRemuneration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Reward associated to the customer in terms of monetary remuneration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Monetary remuneration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Reward"
+  }, {
+    "@id" : "_:genid29"
+  } ]
+}, {
   "@id" : "http://delta.linkeddata.es/def/core#OvervoltageViolation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -770,9 +814,7 @@
     "@value" : "Payment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://saref.etsi.org/core/Price"
-  }, {
-    "@id" : "_:genid29"
+    "@id" : "_:genid30"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#Phase",
@@ -782,6 +824,18 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Phase"
+  } ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#Point",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Reward associated to the customer in terms of  points"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Reward"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#PowerConsumption",
@@ -837,11 +891,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://saref.etsi.org/core/Profile"
   }, {
-    "@id" : "_:genid30"
-  }, {
     "@id" : "_:genid31"
   }, {
     "@id" : "_:genid32"
+  }, {
+    "@id" : "_:genid33"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#Prosumer",
@@ -867,7 +921,7 @@
     "@value" : "Reward"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://saref.etsi.org/core/Property"
+    "@id" : "_:genid34"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#Sector",
@@ -881,7 +935,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.opengis.net/ont/geosparql#Feature"
   }, {
-    "@id" : "_:genid33"
+    "@id" : "_:genid35"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#SmartContract",
@@ -893,11 +947,11 @@
     "@value" : "Smart contract"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid34"
-  }, {
-    "@id" : "_:genid35"
-  }, {
     "@id" : "_:genid36"
+  }, {
+    "@id" : "_:genid37"
+  }, {
+    "@id" : "_:genid38"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#StorageCapacity",
@@ -933,11 +987,11 @@
     "@value" : "Violation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid37"
-  }, {
-    "@id" : "_:genid38"
-  }, {
     "@id" : "_:genid39"
+  }, {
+    "@id" : "_:genid40"
+  }, {
+    "@id" : "_:genid41"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#ViolationCondition",
@@ -949,9 +1003,9 @@
     "@value" : "Violation condition"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid40"
+    "@id" : "_:genid42"
   }, {
-    "@id" : "_:genid41"
+    "@id" : "_:genid43"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#VirtualNode",
@@ -967,10 +1021,6 @@
   }, {
     "@id" : "https://w3id.org/def/openadr#VTN"
   }, {
-    "@id" : "_:genid42"
-  }, {
-    "@id" : "_:genid43"
-  }, {
     "@id" : "_:genid44"
   }, {
     "@id" : "_:genid45"
@@ -978,6 +1028,10 @@
     "@id" : "_:genid46"
   }, {
     "@id" : "_:genid47"
+  }, {
+    "@id" : "_:genid48"
+  }, {
+    "@id" : "_:genid49"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#Voltage",
@@ -1199,18 +1253,6 @@
     "@value" : "has phase"
   } ]
 }, {
-  "@id" : "http://delta.linkeddata.es/def/core#hasPoint",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Points that are used by the DELTA platform to calculate the customers rewards"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has point"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ]
-}, {
   "@id" : "http://delta.linkeddata.es/def/core#hasPort",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1275,6 +1317,15 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has reward"
+  } ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#hasRewardValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship defining the value of a certain reward, e.g., points or money"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has reward value"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#hasSmartContract",
@@ -1379,6 +1430,18 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#isDefinedIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship defining the currency associated to a value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is defined in"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#isLocatedAt",
@@ -1554,6 +1617,11 @@
     "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
   } ]
 }, {
+  "@id" : "http://www.w3.org/2002/07/owl#topDataProperty",
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
   "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
@@ -1613,7 +1681,7 @@
     "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid48"
+    "@id" : "_:genid50"
   } ]
 }, {
   "@id" : "https://saref.etsi.org/core/Energy",
@@ -1627,7 +1695,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://saref.etsi.org/core/Property"
   }, {
-    "@id" : "_:genid49"
+    "@id" : "_:genid51"
   } ]
 }, {
   "@id" : "https://saref.etsi.org/core/FeatureOfInterest",
@@ -1651,13 +1719,13 @@
     "@value" : "Measurement"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid50"
-  }, {
-    "@id" : "_:genid51"
-  }, {
     "@id" : "_:genid52"
   }, {
     "@id" : "_:genid53"
+  }, {
+    "@id" : "_:genid54"
+  }, {
+    "@id" : "_:genid55"
   } ]
 }, {
   "@id" : "https://saref.etsi.org/core/Power",
@@ -1699,7 +1767,7 @@
     "@value" : "Profile"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid54"
+    "@id" : "_:genid56"
   } ]
 }, {
   "@id" : "https://saref.etsi.org/core/Property",
@@ -1714,7 +1782,7 @@
     "@value" : "Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid55"
+    "@id" : "_:genid57"
   } ]
 }, {
   "@id" : "https://saref.etsi.org/core/UnitOfMeasure",
@@ -1755,13 +1823,12 @@
 }, {
   "@id" : "https://saref.etsi.org/core/hasValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A relationship defining the value of a certain property, e.g., energy or power. Note that, even if numeric values are expected to enable reasoning, measurement values could use other datatypes."
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@value" : "https://w3id.org/def/saref"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "A relationship defining the value of a certain property, e.g., energy or power. Note that, even if numeric values are expected to enable reasoning, measurement values could use other datatypes."
+  }, {
     "@value" : "has value"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
@@ -1867,7 +1934,7 @@
     "@value" : "Key Performance Indicator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid56"
+    "@id" : "_:genid58"
   } ]
 }, {
   "@id" : "https://saref.etsi.org/saref4city/isDerivedFrom",
