@@ -17,7 +17,7 @@
         <terms:creator rdf:resource="https://www.linkedin.com/in/andrea-cimmino-arriaga-64b6b9112/"/>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
         <rdfs:comment>This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible.</rdfs:comment>
-        <owl:versionInfo>0.2.5</owl:versionInfo>
+        <owl:versionInfo>0.2.6</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -121,6 +121,16 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#hasBoundary -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasBoundary">
+        <rdfs:comment>A relationship defining the boundary values (min and max values) of an entity</rdfs:comment>
+        <rdfs:label>has boundary</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#hasComfortSetting -->
 
 
@@ -188,6 +198,18 @@
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasIndex">
         <rdfs:comment>Link between a Virtual Node and its index.</rdfs:comment>
         <rdfs:label>has index</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#hasLowerBoundary -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasLowerBoundary">
+        <rdfs:domain rdf:resource="http://delta.linkeddata.es/def/core#Boundary"/>
+        <rdfs:range rdf:resource="http://delta.linkeddata.es/def/core#Measurement"/>
+        <rdfs:comment>A relationship defining the lower boundary of an entity (e.g. a comfort setting).</rdfs:comment>
+        <rdfs:label>has lower boundary</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -281,6 +303,18 @@
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasTransaction">
         <rdfs:comment>Link between a smart contracts and the transactions it stores</rdfs:comment>
         <rdfs:label>has transaction</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#hasUpperBoundary -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasUpperBoundary">
+        <rdfs:domain rdf:resource="http://delta.linkeddata.es/def/core#Boundary"/>
+        <rdfs:range rdf:resource="http://delta.linkeddata.es/def/core#Measurement"/>
+        <rdfs:comment>A relationship defining the upper boundary of an entity (e.g. a comfort setting).</rdfs:comment>
+        <rdfs:label>has upper boundary</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -808,6 +842,18 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#supportsAutomatedDR -->
+
+
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#supportsAutomatedDR">
+        <rdfs:domain rdf:resource="http://delta.linkeddata.es/def/core#FEID"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>A relationship that indicates whether a FEID accepts or rejects DR requests automatically.</rdfs:comment>
+        <rdfs:label>supports automated DR</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
 
 
@@ -920,6 +966,38 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#Battery -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Battery">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Asset"/>
+        <rdfs:label>Battery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Boundary -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Boundary">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasLowerBoundary"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Boundary"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasUpperBoundary"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Boundary"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Limit of a value.</rdfs:comment>
+        <rdfs:label>Boundary</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#Cluster -->
 
 
@@ -952,6 +1030,18 @@
 
 
     <owl:Class rdf:about="http://delta.linkeddata.es/def/core#ComfortSetting">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasBoundary"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Boundary"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isAbout"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label>Comfort setting</rdfs:label>
     </owl:Class>
     
@@ -1108,6 +1198,16 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#HVAC -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#HVAC">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Asset"/>
+        <rdfs:label>HVAC</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#Incentive -->
 
 
@@ -1124,6 +1224,16 @@
     <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Index">
         <rdfs:comment>Reliability and Fairness Index that refers to the distribution network configuration</rdfs:comment>
         <rdfs:label>Index</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Lightbulb -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Lightbulb">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Asset"/>
+        <rdfs:label>Lightbulb</rdfs:label>
     </owl:Class>
     
 
@@ -1274,6 +1384,16 @@
         <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Customer"/>
         <rdfs:comment>Entity that consumes or produces energy</rdfs:comment>
         <rdfs:label>Prosumer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Relay -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Relay">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Asset"/>
+        <rdfs:label>Relay</rdfs:label>
     </owl:Class>
     
 

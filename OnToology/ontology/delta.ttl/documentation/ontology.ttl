@@ -14,7 +14,7 @@
                                                                           <https://www.linkedin.com/in/andrea-cimmino-arriaga-64b6b9112/> ;
                                        <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                        rdfs:comment "This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible." ;
-                                       owl:versionInfo "0.2.5" .
+                                       owl:versionInfo "0.2.6" .
 
 #################################################################
 #    Annotation properties
@@ -69,6 +69,12 @@
                        rdfs:label "has aggregated property" .
 
 
+###  http://delta.linkeddata.es/def/core#hasBoundary
+:hasBoundary rdf:type owl:ObjectProperty ;
+             rdfs:comment "A relationship defining the boundary values (min and max values) of an entity" ;
+             rdfs:label "has boundary" .
+
+
 ###  http://delta.linkeddata.es/def/core#hasComfortSetting
 :hasComfortSetting rdf:type owl:ObjectProperty ;
                    rdfs:comment "Relation to define the comfort settings of a system." ;
@@ -110,6 +116,14 @@
 :hasIndex rdf:type owl:ObjectProperty ;
           rdfs:comment "Link between a Virtual Node and its index." ;
           rdfs:label "has index" .
+
+
+###  http://delta.linkeddata.es/def/core#hasLowerBoundary
+:hasLowerBoundary rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Boundary ;
+                  rdfs:range :Measurement ;
+                  rdfs:comment "A relationship defining the lower boundary of an entity (e.g. a comfort setting)." ;
+                  rdfs:label "has lower boundary" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasPayment
@@ -167,6 +181,14 @@
 :hasTransaction rdf:type owl:ObjectProperty ;
                 rdfs:comment "Link between a smart contracts and the transactions it stores" ;
                 rdfs:label "has transaction" .
+
+
+###  http://delta.linkeddata.es/def/core#hasUpperBoundary
+:hasUpperBoundary rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Boundary ;
+                  rdfs:range :Measurement ;
+                  rdfs:comment "A relationship defining the upper boundary of an entity (e.g. a comfort setting)." ;
+                  rdfs:label "has upper boundary" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasViolationCondition
@@ -485,6 +507,14 @@
         rdfs:label "status" .
 
 
+###  http://delta.linkeddata.es/def/core#supportsAutomatedDR
+:supportsAutomatedDR rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :FEID ;
+                     rdfs:range xsd:boolean ;
+                     rdfs:comment "A relationship that indicates whether a FEID accepts or rejects DR requests automatically." ;
+                     rdfs:label "supports automated DR" .
+
+
 ###  http://www.w3.org/2002/07/owl#topDataProperty
 owl:topDataProperty rdfs:range xsd:float .
 
@@ -552,6 +582,26 @@ owl:topDataProperty rdfs:range xsd:float .
                   "Element contained in the FEID that detects and responds to events in an environment" .
 
 
+###  http://delta.linkeddata.es/def/core#Battery
+:Battery rdf:type owl:Class ;
+         rdfs:subClassOf :Asset ;
+         rdfs:label "Battery" .
+
+
+###  http://delta.linkeddata.es/def/core#Boundary
+:Boundary rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasLowerBoundary ;
+                            owl:someValuesFrom :Boundary
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasUpperBoundary ;
+                            owl:someValuesFrom :Boundary
+                          ] ;
+          rdfs:comment "Limit of a value." ;
+          rdfs:label "Boundary" .
+
+
 ###  http://delta.linkeddata.es/def/core#Cluster
 :Cluster rdf:type owl:Class ;
          rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -572,6 +622,14 @@ owl:topDataProperty rdfs:range xsd:float .
 
 ###  http://delta.linkeddata.es/def/core#ComfortSetting
 :ComfortSetting rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasBoundary ;
+                                  owl:someValuesFrom :Boundary
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty <https://saref.etsi.org/core/isAbout> ;
+                                  owl:someValuesFrom <https://saref.etsi.org/core/Property>
+                                ] ;
                 rdfs:label "Comfort setting" .
 
 
@@ -672,6 +730,12 @@ owl:topDataProperty rdfs:range xsd:float .
            rdfs:label "Frequency" .
 
 
+###  http://delta.linkeddata.es/def/core#HVAC
+:HVAC rdf:type owl:Class ;
+      rdfs:subClassOf :Asset ;
+      rdfs:label "HVAC" .
+
+
 ###  http://delta.linkeddata.es/def/core#Incentive
 :Incentive rdf:type owl:Class ;
            rdfs:comment "Incentive (usually monetary) associated to energy values" ;
@@ -682,6 +746,12 @@ owl:topDataProperty rdfs:range xsd:float .
 :Index rdf:type owl:Class ;
        rdfs:comment "Reliability and Fairness Index that refers to the distribution network configuration" ;
        rdfs:label "Index" .
+
+
+###  http://delta.linkeddata.es/def/core#Lightbulb
+:Lightbulb rdf:type owl:Class ;
+           rdfs:subClassOf :Asset ;
+           rdfs:label "Lightbulb" .
 
 
 ###  http://delta.linkeddata.es/def/core#LineLoadingViolation
@@ -777,6 +847,12 @@ owl:topDataProperty rdfs:range xsd:float .
           rdfs:subClassOf :Customer ;
           rdfs:comment "Entity that consumes or produces energy" ;
           rdfs:label "Prosumer" .
+
+
+###  http://delta.linkeddata.es/def/core#Relay
+:Relay rdf:type owl:Class ;
+       rdfs:subClassOf :Asset ;
+       rdfs:label "Relay" .
 
 
 ###  http://delta.linkeddata.es/def/core#Reward

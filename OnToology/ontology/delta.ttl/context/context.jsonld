@@ -8,6 +8,10 @@
       "@id" : "https://saref.etsi.org/saref4city/isDerivedFrom",
       "@type" : "@id"
     },
+    "hasBoundary" : {
+      "@id" : "http://delta.linkeddata.es/def/core#hasBoundary",
+      "@type" : "@id"
+    },
     "isDefinedIn" : {
       "@id" : "http://delta.linkeddata.es/def/core#isDefinedIn",
       "@type" : "@id"
@@ -25,6 +29,9 @@
     },
     "Reward" : {
       "@id" : "http://delta.linkeddata.es/def/core#Reward"
+    },
+    "Battery" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Battery"
     },
     "EnergyMarket" : {
       "@id" : "http://delta.linkeddata.es/def/core#EnergyMarket"
@@ -81,6 +88,9 @@
     },
     "Prosumer" : {
       "@id" : "http://delta.linkeddata.es/def/core#Prosumer"
+    },
+    "Relay" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Relay"
     },
     "topDataProperty" : {
       "@id" : "http://www.w3.org/2002/07/owl#topDataProperty",
@@ -182,6 +192,9 @@
       "@id" : "http://delta.linkeddata.es/def/core#isRelatedTo",
       "@type" : "@id"
     },
+    "Boundary" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Boundary"
+    },
     "VirtualNode" : {
       "@id" : "http://delta.linkeddata.es/def/core#VirtualNode"
     },
@@ -205,6 +218,9 @@
       "@id" : "http://delta.linkeddata.es/def/core#isLocatedAt",
       "@type" : "@id"
     },
+    "HVAC" : {
+      "@id" : "http://delta.linkeddata.es/def/core#HVAC"
+    },
     "hasViolationType" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasViolationType"
     },
@@ -216,6 +232,10 @@
     },
     "Producer" : {
       "@id" : "http://delta.linkeddata.es/def/core#Producer"
+    },
+    "hasUpperBoundary" : {
+      "@id" : "http://delta.linkeddata.es/def/core#hasUpperBoundary",
+      "@type" : "@id"
     },
     "isRequestedTo" : {
       "@id" : "http://delta.linkeddata.es/def/core#isRequestedTo",
@@ -293,6 +313,10 @@
     },
     "KeyPerfomanceIndicatorAssessement" : {
       "@id" : "https://saref.etsi.org/saref4city/KeyPerfomanceIndicatorAssessement"
+    },
+    "hasLowerBoundary" : {
+      "@id" : "http://delta.linkeddata.es/def/core#hasLowerBoundary",
+      "@type" : "@id"
     },
     "isProfileOf" : {
       "@id" : "http://delta.linkeddata.es/def/core#isProfileOf",
@@ -437,6 +461,9 @@
     "Power" : {
       "@id" : "https://saref.etsi.org/core/Power"
     },
+    "Lightbulb" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Lightbulb"
+    },
     "belongsToCluster" : {
       "@id" : "http://delta.linkeddata.es/def/core#belongsToCluster",
       "@type" : "@id"
@@ -444,6 +471,10 @@
     "requests" : {
       "@id" : "http://delta.linkeddata.es/def/core#requests",
       "@type" : "@id"
+    },
+    "supportsAutomatedDR" : {
+      "@id" : "http://delta.linkeddata.es/def/core#supportsAutomatedDR",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "hasReliability" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasReliability",
