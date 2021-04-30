@@ -65,9 +65,9 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-28
 <http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-28> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-28> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
-<http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-28> <http://w3id.org/def/vtc#desiredBehaviour> "Frequency subclassOf Property" .
-<http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-28> <http://w3id.org/def/vtc#desiredBehaviour> "Load subclassOf Property" .
-<http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-28> <http://w3id.org/def/vtc#desiredBehaviour> "Voltage subclassOf Property" .
+<http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-28> <http://w3id.org/def/vtc#desiredBehaviour> "Frequency subclassOf core:Property" .
+<http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-28> <http://w3id.org/def/vtc#desiredBehaviour> "Load subclassOf core:Property" .
+<http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-28> <http://w3id.org/def/vtc#desiredBehaviour> "Voltage subclassOf core:Property" .
 <http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-28> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://delta.iot.linkeddata.es/requirements/report.html#delta-28> .
 # 
 # http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-33
@@ -94,6 +94,12 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-37> <http://w3id.org/def/vtc#desiredBehaviour> "Device subclassOf measuresProperty some EnergyConsumption" .
 <http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-37> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://delta.iot.linkeddata.es/requirements/report.html#delta-37> .
 # 
+# http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-41
+<http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-41> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-41> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-41> <http://w3id.org/def/vtc#desiredBehaviour> "Prosumer subclassOf SpatialObject" .
+<http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-41> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://delta.iot.linkeddata.es/requirements/report.html#delta-41> .
+# 
 # http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-43
 <http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-43> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-43> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
@@ -111,7 +117,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-47
 <http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-47> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-47> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
-<http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-47> <http://w3id.org/def/vtc#desiredBehaviour> "VirtualNode subclassOf belongsToCluster some Cluster" .
+<http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-47> <http://w3id.org/def/vtc#desiredBehaviour> "VirtualNode subclassOf belongsToCluster only Cluster" .
 <http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-47> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://delta.iot.linkeddata.es/requirements/report.html#delta-47> .
 # 
 # http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-50
@@ -129,7 +135,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-54
 <http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-54> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-54> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
-<http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-54> <http://w3id.org/def/vtc#desiredBehaviour> "Customer subclassOf hasRewards only Reward" .
+<http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-54> <http://w3id.org/def/vtc#desiredBehaviour> "Customer subclassOf hasReward only Reward" .
 <http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-54> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://delta.iot.linkeddata.es/requirements/report.html#delta-54> .
 # 
 # http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-55
@@ -142,14 +148,14 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-56
 <http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-56> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-56> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
-<http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-56> <http://w3id.org/def/vtc#desiredBehaviour> "Frequency subclassOf Property" .
-<http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-56> <http://w3id.org/def/vtc#desiredBehaviour> "Voltage subclassOf Property" .
+<http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-56> <http://w3id.org/def/vtc#desiredBehaviour> "Frequency subclassOf core:Property" .
+<http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-56> <http://w3id.org/def/vtc#desiredBehaviour> "Voltage subclassOf core:Property" .
 <http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-56> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://delta.iot.linkeddata.es/requirements/report.html#delta-56> .
 # 
 # http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-57
 <http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-57> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-57> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
-<http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-57> <http://w3id.org/def/vtc#desiredBehaviour> "Profile subclassOf isRelatedToProperty only Property" .
+<http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-57> <http://w3id.org/def/vtc#desiredBehaviour> "Profile relatesToProperty core:Property" .
 <http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-57> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://delta.iot.linkeddata.es/requirements/report.html#delta-57> .
 # 
 # http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-59
