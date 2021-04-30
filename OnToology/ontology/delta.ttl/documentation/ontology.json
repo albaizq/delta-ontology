@@ -642,6 +642,8 @@
     "@value" : "Customer"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#SpatialObject"
+  }, {
     "@id" : "_:genid21"
   }, {
     "@id" : "_:genid22"

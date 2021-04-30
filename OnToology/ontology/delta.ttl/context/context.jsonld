@@ -363,6 +363,9 @@
     "SmartContract" : {
       "@id" : "http://delta.linkeddata.es/def/core#SmartContract"
     },
+    "SpatialObject" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#SpatialObject"
+    },
     "hasRewardValue" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasRewardValue"
     },

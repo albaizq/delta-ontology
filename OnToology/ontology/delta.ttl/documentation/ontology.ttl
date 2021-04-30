@@ -665,7 +665,8 @@ owl:topDataProperty rdfs:range xsd:float .
 
 ###  http://delta.linkeddata.es/def/core#Customer
 :Customer rdf:type owl:Class ;
-          rdfs:subClassOf [ rdf:type owl:Restriction ;
+          rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> ,
+                          [ rdf:type owl:Restriction ;
                             owl:onProperty <https://w3id.org/def/openadr#belongsTo> ;
                             owl:someValuesFrom :CustomerCluster
                           ] ,

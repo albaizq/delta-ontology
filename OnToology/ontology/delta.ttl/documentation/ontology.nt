@@ -591,6 +591,7 @@ _:genid20 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://saref.etsi.org
 # 
 # http://delta.linkeddata.es/def/core#Customer
 <http://delta.linkeddata.es/def/core#Customer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://delta.linkeddata.es/def/core#Customer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#SpatialObject> .
 <http://delta.linkeddata.es/def/core#Customer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid21 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/openadr#belongsTo> .
