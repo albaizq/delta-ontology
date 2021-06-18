@@ -470,9 +470,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://delta.linkeddata.es/def/core#supportsAutomatedDR> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship that indicates whether a FEID accepts or rejects DR requests automatically." .
 <http://delta.linkeddata.es/def/core#supportsAutomatedDR> <http://www.w3.org/2000/01/rdf-schema#label> "supports automated DR" .
 # 
-# http://www.w3.org/2002/07/owl#topDataProperty
-<http://www.w3.org/2002/07/owl#topDataProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-# 
 # https://saref.etsi.org/core/hasTimestamp
 <https://saref.etsi.org/core/hasTimestamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://saref.etsi.org/core/hasTimestamp> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship stating the timestamp of an entity (e.g. a measurement)." .
@@ -899,6 +896,9 @@ _:genid50 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001
 <http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#comment> <http://www.opengis.net/ont/geosparql> .
 <http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types." .
 <http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#label> "Geometry" .
+# 
+# http://www.opengis.net/ont/geosparql#SpatialObject
+<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
 <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

@@ -67,9 +67,9 @@
 ###  http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-28
 <http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-28> rdf:type owl:NamedIndividual ,
                                                                               <http://w3id.org/def/vtc#TestCaseDesign> ;
-                                                                     <http://w3id.org/def/vtc#desiredBehaviour> "Frequency subclassOf Property" ,
-                                                                                                                "Load subclassOf Property" ,
-                                                                                                                "Voltage subclassOf Property" ;
+                                                                     <http://w3id.org/def/vtc#desiredBehaviour> "Frequency subclassOf core:Property" ,
+                                                                                                                "Load subclassOf core:Property" ,
+                                                                                                                "Voltage subclassOf core:Property" ;
                                                                      <http://w3id.org/def/vtc#isRelatedToRequirement> <http://delta.iot.linkeddata.es/requirements/report.html#delta-28> .
 
 
@@ -101,6 +101,13 @@
                                                                      <http://w3id.org/def/vtc#isRelatedToRequirement> <http://delta.iot.linkeddata.es/requirements/report.html#delta-37> .
 
 
+###  http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-41
+<http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-41> rdf:type owl:NamedIndividual ,
+                                                                              <http://w3id.org/def/vtc#TestCaseDesign> ;
+                                                                     <http://w3id.org/def/vtc#desiredBehaviour> "Prosumer subclassOf SpatialObject" ;
+                                                                     <http://w3id.org/def/vtc#isRelatedToRequirement> <http://delta.iot.linkeddata.es/requirements/report.html#delta-41> .
+
+
 ###  http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-43
 <http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-43> rdf:type owl:NamedIndividual ,
                                                                               <http://w3id.org/def/vtc#TestCaseDesign> ;
@@ -120,7 +127,7 @@
 ###  http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-47
 <http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-47> rdf:type owl:NamedIndividual ,
                                                                               <http://w3id.org/def/vtc#TestCaseDesign> ;
-                                                                     <http://w3id.org/def/vtc#desiredBehaviour> "VirtualNode subclassOf belongsToCluster some Cluster" ;
+                                                                     <http://w3id.org/def/vtc#desiredBehaviour> "VirtualNode subclassOf belongsToCluster only Cluster" ;
                                                                      <http://w3id.org/def/vtc#isRelatedToRequirement> <http://delta.iot.linkeddata.es/requirements/report.html#delta-47> .
 
 
@@ -141,7 +148,7 @@
 ###  http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-54
 <http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-54> rdf:type owl:NamedIndividual ,
                                                                               <http://w3id.org/def/vtc#TestCaseDesign> ;
-                                                                     <http://w3id.org/def/vtc#desiredBehaviour> "Customer subclassOf hasRewards only Reward" ;
+                                                                     <http://w3id.org/def/vtc#desiredBehaviour> "Customer subclassOf hasReward only Reward" ;
                                                                      <http://w3id.org/def/vtc#isRelatedToRequirement> <http://delta.iot.linkeddata.es/requirements/report.html#delta-54> .
 
 
@@ -156,15 +163,15 @@
 ###  http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-56
 <http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-56> rdf:type owl:NamedIndividual ,
                                                                               <http://w3id.org/def/vtc#TestCaseDesign> ;
-                                                                     <http://w3id.org/def/vtc#desiredBehaviour> "Frequency subclassOf Property" ,
-                                                                                                                "Voltage subclassOf Property" ;
+                                                                     <http://w3id.org/def/vtc#desiredBehaviour> "Frequency subclassOf core:Property" ,
+                                                                                                                "Voltage subclassOf core:Property" ;
                                                                      <http://w3id.org/def/vtc#isRelatedToRequirement> <http://delta.iot.linkeddata.es/requirements/report.html#delta-56> .
 
 
 ###  http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-57
 <http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-57> rdf:type owl:NamedIndividual ,
                                                                               <http://w3id.org/def/vtc#TestCaseDesign> ;
-                                                                     <http://w3id.org/def/vtc#desiredBehaviour> "Profile subclassOf isRelatedToProperty only Property" ;
+                                                                     <http://w3id.org/def/vtc#desiredBehaviour> "Profile relatesToProperty core:Property" ;
                                                                      <http://w3id.org/def/vtc#isRelatedToRequirement> <http://delta.iot.linkeddata.es/requirements/report.html#delta-57> .
 
 

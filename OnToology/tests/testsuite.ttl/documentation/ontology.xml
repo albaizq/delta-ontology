@@ -124,9 +124,9 @@
 
     <NamedIndividual rdf:about="http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-28">
         <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
-        <vtc:desiredBehaviour>Frequency subclassOf Property</vtc:desiredBehaviour>
-        <vtc:desiredBehaviour>Load subclassOf Property</vtc:desiredBehaviour>
-        <vtc:desiredBehaviour>Voltage subclassOf Property</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Frequency subclassOf core:Property</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Load subclassOf core:Property</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Voltage subclassOf core:Property</vtc:desiredBehaviour>
         <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-28"/>
     </NamedIndividual>
     
@@ -176,6 +176,17 @@
     
 
 
+    <!-- http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-41 -->
+
+
+    <NamedIndividual rdf:about="http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-41">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Prosumer subclassOf SpatialObject</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-41"/>
+    </NamedIndividual>
+    
+
+
     <!-- http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-43 -->
 
 
@@ -205,7 +216,7 @@
 
     <NamedIndividual rdf:about="http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-47">
         <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
-        <vtc:desiredBehaviour>VirtualNode subclassOf belongsToCluster some Cluster</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>VirtualNode subclassOf belongsToCluster only Cluster</vtc:desiredBehaviour>
         <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-47"/>
     </NamedIndividual>
     
@@ -238,7 +249,7 @@
 
     <NamedIndividual rdf:about="http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-54">
         <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
-        <vtc:desiredBehaviour>Customer subclassOf hasRewards only Reward</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Customer subclassOf hasReward only Reward</vtc:desiredBehaviour>
         <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-54"/>
     </NamedIndividual>
     
@@ -261,8 +272,8 @@
 
     <NamedIndividual rdf:about="http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-56">
         <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
-        <vtc:desiredBehaviour>Frequency subclassOf Property</vtc:desiredBehaviour>
-        <vtc:desiredBehaviour>Voltage subclassOf Property</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Frequency subclassOf core:Property</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Voltage subclassOf core:Property</vtc:desiredBehaviour>
         <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-56"/>
     </NamedIndividual>
     
@@ -273,7 +284,7 @@
 
     <NamedIndividual rdf:about="http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-57">
         <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
-        <vtc:desiredBehaviour>Profile subclassOf isRelatedToProperty only Property</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Profile relatesToProperty core:Property</vtc:desiredBehaviour>
         <vtc:isRelatedToRequirement rdf:resource="http://delta.iot.linkeddata.es/requirements/report.html#delta-57"/>
     </NamedIndividual>
     
