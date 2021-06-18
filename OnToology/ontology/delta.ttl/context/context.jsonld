@@ -90,8 +90,7 @@
       "@id" : "http://delta.linkeddata.es/def/core#Relay"
     },
     "topDataProperty" : {
-      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty",
-      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
     },
     "MonetaryRemuneration" : {
       "@id" : "http://delta.linkeddata.es/def/core#MonetaryRemuneration"
